@@ -138,13 +138,15 @@ input[type="tel"] {
 	margin-bottom: 15px;
 }
 
-.form__btn {
-	width: 100%;
-	padding: 15px 0;
-
+.btn {
 	background: linear-gradient(#e60204, #ad0509);
 	color: #fff;
 	border: none;
+	padding: 15px 0;
+}
+
+.form__btn {
+	width: 100%;
 
 	margin-bottom: 10px;
 }
@@ -186,8 +188,125 @@ input[type="tel"] {
 }
 
 .advantages__item__title {
-	margin-bottom: 35px;
+	margin: 35px 0;
 
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.services {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.services__title {
+	font-size: 30px;
+
+	margin-bottom: 25px;
+}
+
+.services__box {
+	margin-top: 70px;
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.services__item {
+	width: 30%;
+
+	@media (max-width: 760px) {
+		width: 50%;
+	}
+}
+
+.services__price {
+	display: block;
+	margin: 25px 0;
+}
+
+.services__btn {
+	display: block;
+	width: 100%;
+}
+
+.services__item__title {
+	font-weight: bold;
+
+	margin-top: 30px;
+}
+
+/*Docs style*/
+
+.docs {
+	background-color: #ededed;
+
+	padding: 80px 0;
+}
+
+.docs__title {
+	font-size: 30px;
+	text-align: center;
+
+	margin-bottom: 80px;
+}
+
+.docs__box {
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.docs__list {
+	width: 45%;
+}
+
+.docs__list > ul {
+	padding: 0 15px;
+}
+
+.docs__list > ul > li {
+	color: red;
+
+	margin-bottom: 10px;
+}
+
+.docs__list > ul > li > span {
+	color: black;
+}
+
+.docs__list__title {
+	font-size: 18px;
+	font-weight: bold;
+
+	margin-bottom: 15px;
+}
+
+.docs__warn {
+	padding: 15px;
+	margin-top: 20px;
+
+	border: 2px solid red;
+}
+
+.work {
+	padding: 80px 0;
+}
+
+.work__title {
+	font-size: 30px;
+	text-align: center;
+
+	margin-bottom: 80px;
+}
+
+.work__box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.work__box__item {
+	width: 22%;
+
+	text-align: center;
 }
