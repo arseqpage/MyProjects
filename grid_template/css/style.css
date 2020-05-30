@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+/* LOGO */
+
+.logo h1 {
+	margin: 0;
+}
+
+.logo__link {
+	color: #324759;
+
+	text-decoration: none;
+	font-size: 2.5rem;
+}
+
+/*MENU*/
+
+.main-menu {
+	padding: 0;
+	margin: 0;
+
+	font-size: 1.2rem;
+
+	display: flex;
+}
+
+.main-menu__item {
+	list-style-type: none;
+	margin-right: 1rem;
+	display: inline-block;
+}
+
+.main-menu__item a {
+	color: #324759;
+
+	text-decoration: none;
+}
+
+.main-menu__item a:hover {
+	text-decoration: underline;
+	color: #657a8c;
+}
+
+/*=== Latest posts ===*/
+.latest-posts {
+	border: 1px solid #657a8c;
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+.latest-posts h3 {
+	margin-top: 0;
+}
+
+.latest-posts-menu {
+	padding: 0;
+}
+
+.latest-posts-menu__item {
+	list-style-type: none;
+	margin-top: 0.5rem;
+}
+
+.latest-posts-menu__item a {
+	color: #8c764d;
+}
+
+.latest-posts-menu__item a:hover {
+	color: #bfb26f;
+}
+/*=== End latest posts ===*/
+/*=== Main content ===*/
+.content-area h2 {
+	font-size: 1.8rem;
+	margin-top: 0;
+}
+
+.content-area p {
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+/*=== End main content ===*/

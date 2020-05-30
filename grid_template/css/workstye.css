@@ -1,0 +1,87 @@
+@import url(reset.css);
+
+body {
+	font-family: "Fira Sans";
+}
+
+.header {
+	height: 100vh;
+	padding: 85px 0;
+
+	background-image: url(../img/SLANTED.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.header-logo {
+}
+
+.header__container {
+	display: grid;
+	max-width: 1150px;
+	margin: auto;
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr;
+	grid-row-gap: 200px;
+}
+
+.header__title {
+	font-weight: 300;
+	font-size: 72px;
+
+	margin-bottom: 50px;
+}
+
+.header__subtitle {
+	font-size: 30px;
+
+	grid-column: 1/2;
+}
+
+.header__menu {
+	grid-column: 2/3;
+	grid-row: 1;
+
+	justify-self: end;
+}
+
+.header__menu img {
+	display: block;
+	margin: auto;
+}
+
+.header__menu span {
+	display: block;
+}
+
+/*End header*/
+
+/*Photo*/
+
+.photo__container {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
+}
+
+.photo__left img {
+	width: 100%;
+}
+.photo__text {
+	padding: 110px 0 0 50px;
+}
+
+.photo__text h3 {
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	margin-bottom: 50px;
+}
+
+.photo__text p {
+	font-size: 36px;
+}
