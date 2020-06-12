@@ -1,0 +1,91 @@
+.skills {
+	background-color: $second;
+}
+
+.skills__wrap {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	display: flex;
+}
+
+.skills__left {
+	flex-basis: 280px;
+	margin-right: 215px;
+}
+
+.skills__right {
+	flex-grow: 1;
+}
+
+.skills__title {
+	font-size: 30px;
+	font-family: "Raleway";
+	color: $white;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.1;
+
+	margin: 20px 0;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		background-color: $white;
+		position: absolute;
+
+		left: 0;
+		top: -25px;
+
+		width: 70px;
+		height: 2px;
+	}
+}
+
+.skills__text {
+	font-size: 14px;
+	font-family: "Roboto";
+	color: $white;
+	line-height: 1.429;
+
+	margin: 20px 0;
+}
+
+.skills__button {
+	@include button($primary) {
+		margin-top: 50px;
+	}
+}
+
+.skills__progress {
+	margin: 20px 0;
+}
+
+@media (max-width: 980px) {
+	.skills__left {
+		margin-right: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.skills__wrap {
+		flex-direction: column;
+	}
+	.skills__left {
+		flex-basis: auto;
+		margin-right: 0;
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 480px) {
+	.skills__wrap {
+		padding-top: 40px;
+	}
+	.skills__left {
+		flex-basis: auto;
+		margin-right: 0;
+		margin-bottom: 25px;
+	}
+}

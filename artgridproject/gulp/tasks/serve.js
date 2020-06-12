@@ -6,7 +6,7 @@ module.exports = function () {
 		});
 		$.gulp.watch('sass/**/*.scss', $.gulp.series('sass'));
 		$.gulp.watch('*.html', $.gulp.series('html'));
-		$.gulp.watch('js/**/*.scss', $.gulp.series('scripts'));
+		$.gulp.watch('js/**/*.js', $.gulp.series('scripts'));
 		$.gulp.watch('img/**/*.{png,jpg,svg}', $.gulp.series('allimg'));
 	});
 };
