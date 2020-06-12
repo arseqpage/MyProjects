@@ -1,5 +1,5 @@
 @import url(reset.css);
-
+@import url(media.css);
 body {
 	font-family: "Fira Sans";
 
@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-	min-height: 100vh;
+	height: 100vh;
 	padding: 80px 0;
 
 	background-size: cover;
@@ -28,32 +28,49 @@ body {
 	background-image: url(../img/SLANTED.png);
 }
 
-.header__container {
-	grid-template-rows: 1fr 1fr;
-}
-
 .header-logo {
-	grid-column: 1;
+	grid-column: 3/9;
 }
 
 .header__menu {
-	grid-column: 12;
+	grid-column: 14;
+
+	justify-self: end;
+}
+
+.header__menu img {
+	margin-left: auto;
+
+	display: block;
+}
+
+.header__menu span {
+	display: block;
+
+	text-transform: uppercase;
+	margin-top: 10px;
+
+	font-size: 0.7rem;
+}
+
+.header__container {
+	grid-row-gap: 250px;
 }
 
 .main__text {
-	grid-column: 1 / 7;
+	grid-column: 3 / 9;
 	grid-row: 2;
 }
 
 .header__title {
-	font-size: 3rem;
+	font-size: 5rem;
 	font-weight: 300;
 
 	margin-bottom: 50px;
 }
 
 .header__subtitle {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 .header__subtitle span {
@@ -75,6 +92,7 @@ body {
 	height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .travel__right {
@@ -131,6 +149,7 @@ body {
 
 .insta__left {
 	grid-column: 3/9;
+	padding: 10px 0;
 
 	color: #fff;
 
@@ -143,6 +162,7 @@ body {
 
 .insta__right img {
 	width: 100%;
+	height: 100%;
 }
 
 .btn {
@@ -197,7 +217,7 @@ body {
 	grid-row: 1;
 	z-index: 10;
 
-	padding: 140px 120px 90px 60px;
+	padding: 30px 30px;
 }
 
 .play__right {
@@ -249,22 +269,118 @@ body {
 	padding-left: 60px;
 }
 
-.footer {
-	background-color: #212227;
+@media only screen and (max-width: 1200px) {
+	.header__title {
+		font-size: 4rem;
+	}
+
+	.header__container {
+		grid-row-gap: 150px;
+	}
+
+	.travel__left {
+		grid-column: 3 / 9;
+
+		left: 0;
+		position: absolute;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.travel__right {
+		grid-column: 9/15;
+
+		padding: 80px 0 80px 40px;
+	}
+
+	.title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 30px;
+
+		text-transform: uppercase;
+	}
+
+	.subtitle {
+		font-size: 2rem;
+		font-weight: 300;
+	}
+
+	.play__left {
+		grid-column: 3/9;
+		background-color: #212227;
+
+		grid-row: 1;
+		z-index: 10;
+
+		padding: 70px 60px 45px 60px;
+	}
+
+	.play__right {
+		grid-column: 3 / 17;
+		grid-row: 1/3;
+	}
+
+	.btn {
+		font-size: 0.6rem;
+	}
+
+	.btn__green {
+		font-size: 0.6rem;
+	}
 }
 
-.footer__text {
-	grid-column: 3/6;
+@media only screen and (max-width: 992px) {
+	.header__title {
+		font-size: 3rem;
+	}
+
+	.header__subtitle {
+		font-size: 1.5rem;
+	}
+
+	.header__container {
+		grid-row-gap: 100px;
+	}
+
+	.main__text {
+		grid-column: 3 /11;
+		grid-row: 2;
+	}
+
+	.title {
+		font-size: 1rem;
+		font-weight: 700;
+		margin-bottom: 30px;
+
+		text-transform: uppercase;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+
+	.play__right {
+		grid-column: 1 / 17;
+		grid-row: 1/3;
+	}
 }
 
-.footer__contacts {
-	grid-column: 7/9;
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+	.play__left {
+		grid-column: 3/9;
+
+		padding: 15px 15px;
+	}
+
+	.insta__right {
+		grid-column: 9/17;
+	}
 }
 
-.footer__sub {
-	grid-column: 10/15;
-}
-
-.footer h4 {
-	color: #fff;
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
 }

@@ -3,7 +3,7 @@
 
 	margin: 0 5rem;
 
-	grid-template-columns: 2fr 6fr 2fr 2fr;
+	grid-template-columns: 2fr 6fr 2fr minmax(min-content, 2fr);
 	/*fr - fraction — доля либо часть чего л
 
 	2 + 6 + 2 + 2 = 12
@@ -18,6 +18,7 @@
 	grid-template-areas:
 		"logo logo menu menu "
 		"offer content content posts"
+		"team team team team"
 		"footer footer footer footer";
 }
 
@@ -32,22 +33,164 @@
 	/* align-self: center;
 	justify-self: end; */
 	place-self: center end;
+	/*Fallback*/
+	margin-bottom: 1rem;
+}
+
+.main-menu ul {
+	display: flex;
+	padding: 0;
 }
 
 .special-offer {
 	grid-area: offer;
+	/*Fallback*/
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}
+
+.special-offer img {
+	max-width: 250px;
+	width: 100%;
 }
 
 .content-area {
 	grid-area: content;
+	/*Fallback*/
+	display: inline-block;
+	width: 55%;
+
+	vertical-align: top;
 }
 
 .latest-posts {
 	grid-area: posts;
 
 	justify-self: end;
+	display: inline-block;
+	width: 24%;
+	/*Fallback*/
+	vertical-align: top;
 }
 
 .footer {
 	grid-area: footer;
+}
+
+.team {
+	grid-area: team;
+
+	display: grid;
+
+	grid-column-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-rows: auto; /*Или maxcontent*/
+	/* auto-fit (Подстраивает, чтобы контент влезал) auto-fill (Множит колноки если есть место для контента) подставляется в repeat*/
+	grid-auto-rows: minmax(min-content, max-content);
+}
+
+.team-member {
+	background-color: #fff;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+	/*Fallback*/
+	margin-bottom: 0;
+}
+
+.special {
+	grid-row: 3 / 4;
+}
+
+.team-member__image {
+	border-radius: 50%;
+	max-width: 100%;
+}
+
+.team-member__description {
+	text-align: center;
+}
+
+@media all and (max-width: 992px) {
+	.container {
+		grid-template-columns: repeat(1fr, 1fr);
+
+		grid-template-areas:
+			"logo menu "
+			"content content"
+			"offer posts"
+			"team team "
+			"footer footer";
+	}
+
+	.team {
+		grid-row-gap: 1rem;
+	}
+
+	.special__offer,
+	.latest-posts,
+	.content-area {
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.container {
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+		grid-column-gap: 0;
+		grid-template-areas:
+			"logo"
+			"menu"
+			"offer"
+			"content"
+			"posts"
+			"team"
+			"footer";
+
+		margin: 0 2rem;
+	}
+
+	.main-menu {
+		justify-self: left;
+	}
+
+	.latest-posts {
+		grid-area: posts;
+
+		justify-self: left;
+	}
+}
+
+@media all and (max-width: 540px) {
+	html {
+		font-size: 14px;
+	}
+
+	.main-menu ul {
+		flex-direction: column;
+	}
+
+	.special-offer__image {
+		max-width: 200px;
+	}
+}
+
+@supports (display: grid;) {
+	.special-offer,
+	.content-area,
+	.latest-posts {
+		width: auto;
+	}
+
+	.main-menu,
+	.team-member {
+		margin-bottom: 0;
+	}
 }
