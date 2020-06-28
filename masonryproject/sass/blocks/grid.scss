@@ -1,0 +1,180 @@
+.grid__size {
+  width: 1%;
+}
+
+.grid__element {
+  position: relative;
+  height: 400px;
+  width: 20%;
+
+  p {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.header-left {
+  background-color: lightgrey;
+  width: 50px;
+}
+
+.header-right {
+  background-color: $second;
+  width: 31%;
+}
+
+.project-one {
+  background-color: $thirty;
+  width: 31%;
+}
+
+.project-two {
+  background-color: $white;
+  width: 38%;
+}
+
+.project-three {
+  background-color: gray;
+  width: 31%;
+  height: 200px;
+}
+
+.project-four {
+  background-color: lightgrey;
+  width: 31%;
+}
+
+.project-five {
+  background-color: darkgray;
+  width: 19%;
+}
+
+.project-six {
+  background-color: gray;
+  width: 50%;
+}
+
+.project-seven {
+  background-color: $white;
+  width: 31%;
+  height: 200px;
+}
+
+.project-eight {
+  background-color: lightgrey;
+  width: 50%;
+}
+
+.project-nine {
+  background-color: gray;
+  width: 19%;
+}
+
+.project-ten {
+  background-color: $thirty;
+  width: 31%;
+}
+
+.studio-left {
+  background-color: $red;
+  width: 31%;
+}
+
+.studio-right {
+  background-color: lightgrey;
+  width: 69%;
+}
+
+.studio-staff {
+  background-color: gray;
+  width: 31%;
+}
+
+.studio-persons {
+  background-color: darkgray;
+  width: 69%;
+}
+
+.news-left {
+  background-color: greenyellow;
+  width: 31%;
+}
+
+.news-right {
+  background-color: lightgrey;
+  width: 69%;
+}
+
+.footer-left {
+  background-color: darkgrey;
+  width: 50%;
+}
+
+.footer-right {
+  background-color: lightgray;
+  width: 50%;
+}
+
+@media (max-width: 980px) {
+  .header-left,
+  .project-two,
+  .project-three,
+  .project-six,
+  .project-seven,
+  .project-ten {
+    width: 56%;
+  }
+
+  .header-right,
+  .project-one,
+  .project-four,
+  .project-five,
+  .project-eight,
+  .project-nine {
+    width: 44%;
+  }
+
+  .project-three,
+  .project-seven {
+    height: 400px;
+  }
+
+  .studio-left,
+  .studio-right {
+    width: 100%;
+  }
+
+  .news-left,
+  .news-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-left,
+  .project-two,
+  .project-three,
+  .project-six,
+  .project-seven,
+  .project-ten,
+  .header-right,
+  .project-one,
+  .project-four,
+  .project-five,
+  .project-eight,
+  .project-nine,
+  .studio-staff,
+  .studio-persons {
+    width: 100%;
+  }
+}
