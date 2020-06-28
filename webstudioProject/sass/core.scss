@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+
+html {
+	font-size: 16px;
+	color: $black;
+}
+
+body {
+	font-family: "opensans", "Arial", sans-serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.container {
+	@include min-max(320px, 100%, 0);
+}
+
+.wrap {
+	max-width: 1175px;
+	display: block;
+	margin: 0 auto;
+}
+
+.button {
+	padding: 14px 15px;
+	box-sizing: border-box;
+	background-color: transparent;
+
+	text-transform: uppercase;
+
+	cursor: pointer;
+}
