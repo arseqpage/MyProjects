@@ -20,7 +20,7 @@ body {
 }
 
 .wrap {
-	max-width: 1175px;
+	max-width: 1170px;
 	display: block;
 	margin: 0 auto;
 }
@@ -33,4 +33,14 @@ body {
 	text-transform: uppercase;
 
 	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
+@media (max-width: 980px) {
+	.wrap {
+		padding: 0 10px;
+	}
 }
