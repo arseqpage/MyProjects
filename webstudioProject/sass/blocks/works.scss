@@ -1,5 +1,5 @@
 .works__wrap {
-    padding-top: 130px;
+    padding: 130px 0;
 }
 
 .works__title {
@@ -16,12 +16,20 @@
 
 .works__block {
     margin-top: 110px;
+    text-align: center;
+}
+
+.works__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .works-btn {
     border: 2px solid $greenHover;
 
-    margin-right: 20px;
+    margin: 10px 20px;
 
     transition-duration: 500ms;
     transition-property: background-color, color;
@@ -31,16 +39,15 @@
         color: $white;
     }
 
+    &:first-child {
+        margin-left: 0;
+    }
+
     &:last-child {
         margin-right: 0;
     }
 }
 
-.works__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .works-item {
     width: 370px;
@@ -57,4 +64,43 @@
     margin-top: 110px;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.works-view {
+    margin: 0 auto;
+}
+
+
+@media (max-width: 760px) {
+    .works__wrap {
+        padding: 70px 0;
+    }
+
+    .works__block {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .works__grid {
+        margin-top: 50px;
+    }
+}
+
+
+
+@media (max-width: 560px) {
+    .works__buttons {
+        flex-direction: column;
+    }
+
+    .works-btn {
+        &:first-child {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+
 }
