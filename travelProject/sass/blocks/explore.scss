@@ -1,0 +1,36 @@
+.explore {
+    padding-top: 135px;
+    padding-bottom: 135px;
+}
+
+.explore__inner {
+    display: flex;
+}
+
+.explore__img {
+    width: 50%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.explore__text {
+    width: 50%;
+    padding-top: 110px;
+    padding-left: 102px;
+    max-width: 480px;
+}
+
+.explore__title {
+    margin-bottom: 20px;
+}
+
+.explore__subtitle {
+    font-family: 'muli_light', sans-serif;
+    font-size: 17px;
+    line-height: 1.76;
+    color: $textColor;
+
+    margin-bottom: 30px;
+}

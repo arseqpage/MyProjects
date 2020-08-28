@@ -1,0 +1,78 @@
+.star {
+    width: 18px;
+    height: 18px;
+}
+
+.star--green {
+    fill: $darkGreen;
+}
+
+.star--blue {
+    fill: $darkBlue;
+}
+
+.star--red {
+    fill: $darkRed;
+}
+
+.star--lightgreen {
+    fill: $darkGreen2;
+}
+
+.star--lightpurple {
+    fill: $darkPurple;
+}
+
+.categories {
+    margin: 45px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.categories__item {
+    box-sizing: border-box;
+    width: 215px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: $white;
+    opacity: .5;
+    margin: 15px;
+
+    font-family: 'Roboto';
+    font-size: 18px;
+
+    padding: 10px 11px;
+
+    .star {
+        margin-right: 6px;
+    }
+}
+
+.green {
+    background: $green;
+}
+
+.blue {
+    background: $blue;
+}
+
+.red {
+    background: $red;
+}
+
+.lightgreen {
+    background: $lightGreen;
+}
+
+.purple {
+    background: $purple;
+}
+
+.active {
+    opacity: 1;
+}

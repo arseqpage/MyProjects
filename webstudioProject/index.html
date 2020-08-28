@@ -15,16 +15,24 @@
 		<header class="header">
 			<div class="header__wrap wrap">
 				<a class="header__logo" href="#">Your logo</a>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">About</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">Portfolio</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">Contact us</a></li>
-					</ul>
+				<nav class="nav" id="nav">
+					<a class="nav__link" href="#" data-scroll="#services">Services</a>
+					<a class="nav__link" href="#" data-scroll="#clients">Clients</a>
+					<a class="nav__link" href="#" data-scroll="#benefits">Benefits</a>
+					<a class="nav__link" href="#" data-scroll="#team">Team</a>
+					<a class="nav__link" href="#" data-scroll="#mission">Mission</a>
+					<a class="nav__link" href="#" data-scroll="#news">News</a>
+					<a class="nav__link" href="#" data-modal="#becomeClientModal">Contact Us</a>
 				</nav>
+
+				<button class="burger" type="button" id="navToggle">
+					<!-- <img class="burger__icon" src="/assets/images/burger.svg" alt="#"> -->
+
+					<span class="burger__line">1</span>
+					<span class="burger__line">2</span>
+					<span class="burger__line">3</span>
+					<span class="burger__line">4</span>
+				</button>
 			</div>
 		</header>
 
@@ -643,10 +651,10 @@
 				</div>
 				<!-- /.contacts__footer -->
 
-				<form class="form" onsubmit="return false">
+				<form class="form-footer" onsubmit="return false">
 					<div class="form__data">
-						<input type="text" placeholder="Your NAME">
-						<input type="email" placeholder="Your EMAIL">
+						<input class="form__name" type="text" placeholder="Your NAME">
+						<input class="form__email" type="email" placeholder="Your EMAIL">
 					</div>
 					<textarea class="textarea" placeholder="Write Message"></textarea>
 					<input class="send" type="submit" value="send">
@@ -657,7 +665,101 @@
 
 	</div>
 	<!-- /.container -->
+	<!-- Modals -->
+	<div class="modal" id="becomeClientModal">
 
+		<div class="modal__inner">
+			<div class="modal__content">
+
+				<div class="modal__header">
+					<h4 class="modal__title">
+						Need to deliver your cargo?
+						We can help!
+					</h4>
+					<div class="modal__text">
+						<p>Fill a little form and we will call you back!</p>
+					</div>
+				</div>
+
+				<form class="form" action="/" method="post">
+					<div class="form__group">
+						<input class="input input--dark input--user" type="text" placeholder="Your name">
+					</div>
+					<div class="form__group">
+						<input class="input input--dark input--phone" type="tel" placeholder="Your phone">
+					</div>
+					<div class="form__group">
+						<input class="input input--dark input--email" type="email" placeholder="Your email">
+					</div>
+
+					<button class="button main__button--green" type="submit"><span>Call me back</span></button>
+				</form>
+
+				<div class="modal__footer">
+					<h4 class="modal__footer-title">
+						Our contacts
+					</h4>
+
+					<address class="modal__contacts">
+						<p>New York, Street, ZIP code</p>
+						<p>Phone: <a href="tel:+9948373123">+9948373123</a></p>
+						<p>E-mail: <a href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
+
+					</address>
+
+				</div>
+
+				<button class="modal__close" type="button" data-modal-close>
+					<img src="img/close.svg" alt="close">
+				</button>
+
+			</div>
+			<!--/.modal__inner-->
+		</div>
+		<!-- /.modal__content -->
+
+
+	</div>
+	<!--/.modal-->
+
+	<div class="modal modal--thanks" id="thanksModal" style="display: none;">
+
+		<div class="modal__inner">
+
+			<div class="modal__header">
+				<img class="modal__icon" src="img/tick.svg" alt="tick">
+				<h4 class="modal__title modal__title--white">
+					Thanks for your request
+				</h4>
+				<div class="modal__text modal__text--white">
+					<p>We call you back as soon as possible!</p>
+				</div>
+			</div>
+
+
+			<div class="modal__footer">
+				<h4 class="modal__footer-title modal__title--white">
+					Our contacts
+				</h4>
+
+				<address class="modal__contacts">
+					<p class="modal__text--white">New York, Street, ZIP code</p>
+					<p class="modal__text--white">Phone: <a href="tel:+9948373123">+9948373123</a></p>
+					<p class="modal__text--white">E-mail: <a
+							href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
+
+				</address>
+
+			</div>
+
+			<button class="modal__close" type="button">
+				<img src="assets/images/close.svg" alt="close">
+			</button>
+
+		</div>
+		<!--/.modal__inner-->
+
+	</div>
 
 </body>
 

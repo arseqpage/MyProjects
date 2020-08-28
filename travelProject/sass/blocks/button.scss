@@ -1,0 +1,20 @@
+.btn {
+    border: 1px solid transparent;
+    outline: none;
+    padding: 14px 36px;
+    background: $orange;
+    color: $white;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 15px;
+    line-height: 1;
+
+}
+
+.btn--reg {
+    border: 1px solid $orange;
+    background: transparent;
+    color: $orange;
+
+}

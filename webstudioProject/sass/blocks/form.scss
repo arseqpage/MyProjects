@@ -1,0 +1,77 @@
+/* Form */
+.form {
+    .button {
+        width: 100%;
+    }
+}
+
+.form__group {
+    margin-bottom: 25px;
+}
+
+.input {
+    display: block;
+    width: 85%;
+    padding-bottom: 12px;
+    padding-left: 50px;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0;
+    appearance: none;
+    box-shadow: none;
+
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: #fff;
+
+    transition-property: border-bottom-color;
+    transition-duration: 300ms;
+}
+
+.input::placeholder {
+    color: #fff;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom-color: #fff;
+}
+
+.input--user {
+    background: url("../img/user-icon.svg") left 15px top 5px no-repeat;
+}
+
+.input--phone {
+    background: url("../img/phone-icon.svg") left 15px top 5px no-repeat;
+}
+
+.input--email {
+    background: url("../img/main-icon.svg") left 15px top 5px no-repeat;
+}
+
+.input--dark {
+    color: #2c2c2c;
+    border-bottom-color: #e8e8e8;
+}
+
+.input--dark::placeholder {
+    color: #2c2c2c;
+}
+
+.input--dark:focus {
+    border-bottom-color: #000;
+}
+
+.input--dark.input--user {
+    background-image: url("../img/user-black-icon.svg");
+}
+
+.input--dark.input--phone {
+    background-image: url("../img/phone-black-icon.svg");
+}
+
+.input--dark.input--email {
+    background-image: url("../img/mail-black-icon.svg");
+}

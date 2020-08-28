@@ -1,0 +1,133 @@
+.datamain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    text-align: left;
+    outline: none;
+    padding-left: 31px;
+}
+
+.dataarrow {
+    margin-left: auto !important;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    max-width: 220px;
+
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0.8px solid transparent;
+
+}
+
+.custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 31px;
+    font-size: 15px;
+    color: #3b3b3b;
+    height: 60px;
+    line-height: 60px;
+    background: #ffffff;
+    cursor: pointer;
+    border: 0.8px solid $dropBorder;
+    border-radius: 8px;
+}
+
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 0.8px solid $dropDown;
+
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0 20px 0 31px;
+    color: #3b3b3b;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+
+.custom-option.selected {
+    color: #ffffff;
+    background-color: #305c91;
+}
+
+.arrow {
+    position: relative;
+    height: 15px;
+    width: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 1px;
+    height: 5px;
+    transition: all 0.5s;
+}
+
+.arrow::before {
+    left: -2px;
+    transform: rotate(45deg);
+    background-color: $dropDown;
+}
+
+.arrow::after {
+    left: 1px;
+    transform: rotate(-45deg);
+    background-color: $dropDown;
+}
+
+.open .arrow::before {
+    left: -2px;
+    transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+    left: 1px;
+    transform: rotate(45deg);
+}

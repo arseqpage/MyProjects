@@ -50,6 +50,7 @@
 
     transition-duration: 0.5s;
     transition-property: background-color;
+
     &:hover {
         background-color: #1fb3a4;
     }
@@ -94,18 +95,24 @@
         flex-direction: column;
         margin-top: 50px;
         margin-bottom: 50px;
+
+        .main__button {
+            margin: 20px;
+        }
+
+        .main__button--green {
+            margin: 20px;
+        }
     }
 
-    .main__button,
-    .main__button--green {
-        margin: 20px;
-    }
+
 }
 
 @keyframes animateArrow {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(30px);
     }

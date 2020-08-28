@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Travel</title>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+  <script src="js/all.min.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__top">
+            <div class="logo">
+              <img src="img/logo.svg" alt="Logo">
+            </div>
+            <nav class="nav">
+              <a class="nav__item" href="#">Home</a>
+              <a class="nav__item" href="#">Destinations</a>
+              <a class="nav__item" href="#">About</a>
+              <a class="nav__item" href="#">Partner</a>
+              <button class="btn btn--reg" type="button">Login</button>
+              <button class="btn" type="button">Register</button>
+            </nav>
+          </div>
+
+          <div class="header__bottom">
+
+            <div class="header__bottom-left">
+              <h1 class="header__title">Explore and Travel</h1>
+              <p class="header__subtitle">Holiday finder</p>
+              <form class="header__form">
+
+                <div class="custom-select-wrapper">
+                  <div class="custom-select">
+                    <div class="custom-select__trigger"><span>Location</span>
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                      <span class="custom-option selected" data-value="Moscow">Moscow</span>
+                      <span class="custom-option" data-value="SaintP">Saint-Petersburg</span>
+                      <span class="custom-option" data-value="Kazan">Kazan</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-select-wrapper">
+                  <div class="custom-select">
+                    <div class="custom-select__trigger"><span>Activity</span>
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                      <span class="custom-option selected" data-value="Yes">Yes</span>
+                      <span class="custom-option" data-value="No">No</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-select-wrapper">
+                  <div class="custom-select">
+                    <div class="custom-select__trigger"><span>Grade</span>
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="custom-options">
+                      <span class="custom-option selected" data-value="5">5</span>
+                      <span class="custom-option" data-value="4">4</span>
+                      <span class="custom-option" data-value="3">3</span>
+                      <span class="custom-option" data-value="2">2</span>
+                      <span class="custom-option" data-value="1">1</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="custom-select-wrapper" id="data">
+                  <div class="custom-select">
+                    <div class="custom-select__trigger">
+                      <input type="button" class="datepicker-here datamain" value="Data" />
+                      <div class="arrow dataarrow"></div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <button class="btn">Explore</button>
+              </form>
+            </div>
+
+            <div class="header__bottom-right">
+              <img src="img/main-pic.png" alt="">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <section class="explore">
+      <div class="container">
+        <div class="explore__inner">
+          <div class="explore__img">
+            <img src="img/explore.png" alt="Explore">
+          </div>
+
+          <div class="explore__text">
+            <h2 class="explore__title titleH2">A new way to explore the world </h2>
+            <p class="explore__subtitle">For decades travellers have reached for Lonely Planet books when looking to
+              plan and execute their perfect
+              trip, but now, they can also let Lonely Planet Experiences lead the way</p>
+            <button class="btn">Learn more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="container">
+        <div class="featured__inner">
+          <div class="featured__text">
+            <h2 class="featured__title titleH2">Featured destinations</h2>
+            <a class="featured__link" href="#">View all &gt; </a>
+          </div>
+
+          <div class="featured__countries">
+            <div class="featured__item">
+              <img class="featured__item-img" src="img/featured-1.jpg" alt="Featured1">
+              <div class="featured__item-description">
+                <p class="featured__item-name">Raja Ampat </p>
+                <p class="featured__item-text">Indonesia</p>
+              </div>
+            </div>
+
+            <div class="featured__item">
+              <img class="featured__item-img" src="img/featured-2.jpg" alt="Featured2">
+              <div class="featured__item-description">
+                <p class="featured__item-name">Fanjingshan</p>
+                <p class="featured__item-text">China</p>
+              </div>
+            </div>
+
+            <div class="featured__item">
+              <img class="featured__item-img" src="img/featured-3.jpg" alt="Featured3">
+              <div class="featured__item-description">
+                <p class="featured__item-name">Vevey</p>
+                <p class="featured__item-text">Switzerland</p>
+              </div>
+            </div>
+
+            <div class="featured__item">
+              <img class="featured__item-img" src="img/featured-4.jpg" alt="Featured4">
+              <div class="featured__item-description">
+                <p class="featured__item-name">Skadar</p>
+                <p class="featured__item-text">Montenegro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guides">
+      <div class="container">
+        <div class="guides__inner">
+          <div class="guides__text">
+            <h2 class="guides__title titleH2">Guides by Thousand Sunny </h2>
+            <p class="guides__subtitle">Packed with tips and advice from our on-the-ground experts, our city guides app
+              (iOS and Android) is the ultimate resource before and during a trip.</p>
+            <button class="btn">Download</button>
+          </div>
+
+          <div class="guides__img">
+            <img src="img/guides-1.svg" alt="Guides">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
