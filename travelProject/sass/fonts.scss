@@ -23,6 +23,15 @@
 }
 
 @font-face {
+  font-family: 'inter_bold';
+  src: url('/fonts/Interbold.woff2') format('woff2'),
+    url('/fonts/Interbold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'muli_bold';
   src: url('/fonts/Mulibold.woff2') format('woff2'),
     url('/fonts/Mulibold.woff') format('woff');
