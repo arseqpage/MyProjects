@@ -34,3 +34,25 @@
 
     margin-bottom: 30px;
 }
+
+@media (max-width:991px) {
+    .guides {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .guides__inner {
+        flex-direction: column;
+    }
+
+    .guides__text {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .guides__img {
+        width: 100%;
+
+        margin-top: 30px;
+    }
+}

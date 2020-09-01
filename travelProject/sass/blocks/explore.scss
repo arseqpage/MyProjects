@@ -34,3 +34,24 @@
 
     margin-bottom: 30px;
 }
+
+
+@media (max-width: 992px) {
+    .explore__inner {
+        flex-direction: column;
+    }
+
+    .explore__img {
+        order: 2;
+        width: 100%;
+    }
+
+    .explore__text {
+        order: 1;
+
+        padding-top: 0;
+        padding-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}

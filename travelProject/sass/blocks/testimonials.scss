@@ -92,7 +92,7 @@
     display: flex;
     transition-duration: .4s;
 
-    .arrow {
+    .arrow-t {
         fill: #d7d7d7;
     }
 
@@ -103,14 +103,14 @@
     &:hover {
         border-color: $black;
 
-        .arrow {
+        .arrow-t {
             fill: $black;
         }
     }
 
 }
 
-.arrow {
+.arrow-t {
     width: 12px;
     height: 22px;
 
@@ -121,4 +121,21 @@
 
 .prev {
     transform: rotate(180deg);
+}
+
+@media (max-width:768px) {
+    .testimonials__item {
+        flex-direction: column;
+    }
+
+    .testimonials__text {
+        padding-top: 30px;
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
+
+    .testimonials__img {
+        width: 100%;
+    }
 }

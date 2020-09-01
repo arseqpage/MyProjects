@@ -70,3 +70,19 @@
     display: inline-block;
 
 }
+
+@media (max-width:991px) {
+    .featured__item {
+        max-width: 48%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .featured__item {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

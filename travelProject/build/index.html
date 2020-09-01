@@ -33,56 +33,58 @@
             <div class="header__bottom-left">
               <h1 class="header__title">Explore and Travel</h1>
               <p class="header__subtitle">Holiday finder</p>
-              <form class="header__form">
-
-                <div class="custom-select-wrapper">
-                  <div class="custom-select">
-                    <div class="custom-select__trigger"><span>Location</span>
-                      <div class="arrow"></div>
+              <form>
+                <div class="header__form">
+                  <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                      <div class="custom-select__trigger"><span>Location</span>
+                        <div class="arrow"></div>
+                      </div>
+                      <div class="custom-options">
+                        <span class="custom-option selected" data-value="Moscow">Moscow</span>
+                        <span class="custom-option" data-value="SaintP">Saint-Petersburg</span>
+                        <span class="custom-option" data-value="Kazan">Kazan</span>
+                      </div>
                     </div>
-                    <div class="custom-options">
-                      <span class="custom-option selected" data-value="Moscow">Moscow</span>
-                      <span class="custom-option" data-value="SaintP">Saint-Petersburg</span>
-                      <span class="custom-option" data-value="Kazan">Kazan</span>
+                  </div>
+
+                  <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                      <div class="custom-select__trigger"><span>Activity</span>
+                        <div class="arrow"></div>
+                      </div>
+                      <div class="custom-options">
+                        <span class="custom-option selected" data-value="Yes">Yes</span>
+                        <span class="custom-option" data-value="No">No</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                      <div class="custom-select__trigger"><span>Grade</span>
+                        <div class="arrow"></div>
+                      </div>
+                      <div class="custom-options">
+                        <span class="custom-option selected" data-value="5">5</span>
+                        <span class="custom-option" data-value="4">4</span>
+                        <span class="custom-option" data-value="3">3</span>
+                        <span class="custom-option" data-value="2">2</span>
+                        <span class="custom-option" data-value="1">1</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-select-wrapper" id="data">
+                    <div class="custom-select">
+                      <div class="custom-select__trigger">
+                        <input type="button" class="datepicker-here datamain" value="Data" />
+                        <div class="arrow dataarrow"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="custom-select-wrapper">
-                  <div class="custom-select">
-                    <div class="custom-select__trigger"><span>Activity</span>
-                      <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                      <span class="custom-option selected" data-value="Yes">Yes</span>
-                      <span class="custom-option" data-value="No">No</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="custom-select-wrapper">
-                  <div class="custom-select">
-                    <div class="custom-select__trigger"><span>Grade</span>
-                      <div class="arrow"></div>
-                    </div>
-                    <div class="custom-options">
-                      <span class="custom-option selected" data-value="5">5</span>
-                      <span class="custom-option" data-value="4">4</span>
-                      <span class="custom-option" data-value="3">3</span>
-                      <span class="custom-option" data-value="2">2</span>
-                      <span class="custom-option" data-value="1">1</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="custom-select-wrapper" id="data">
-                  <div class="custom-select">
-                    <div class="custom-select__trigger">
-                      <input type="button" class="datepicker-here datamain" value="Data" />
-                      <div class="arrow dataarrow"></div>
-                    </div>
-                  </div>
-                </div>
 
 
                 <button class="btn">Explore</button>
@@ -214,12 +216,12 @@
 
             <div class="testimonials__buttons">
               <button class="testimonials__btn">
-                <svg class="arrow prev">
+                <svg class="arrow-t prev">
                   <use xlink:href="img/symbol/sprite.svg#next"></use>
                 </svg>
               </button>
               <button class="testimonials__btn">
-                <svg class="arrow next">
+                <svg class="arrow-t next">
                   <use xlink:href="img/symbol/sprite.svg#next"></use>
                 </svg>
               </button>
@@ -293,6 +295,93 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner footer--top">
+          <div class="footer__item footer__item--first">
+            <div class="logo">
+              <img src="img/logo.svg" alt="Logo">
+            </div>
+
+            <p class="footer-about footer--text">Plan and book your perfect trip with
+              expert advice, travel tips destination
+              information from us</p>
+            <p class="footer--text">
+              &copy;2020 Thousand Sunny. All rights reserved
+            </p>
+
+          </div>
+
+          <div class="footer__item footer__item--second">
+            <h3 class="footer__item-header">Destinations</h3>
+            <ul class="footer__item-list">
+              <li class="footer__item-link footer--text"><a href="#">Africa</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Antarctica</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Asia</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Europe</a></li>
+              <li class="footer__item-link footer--text"><a href="#">America</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item-third">
+            <h3 class="footer__item-header">Shop</h3>
+            <ul class="footer__item-list">
+              <li class="footer__item-link footer--text"><a href="#">Destination Guides</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Pictorial & Gifts</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Special Offers</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Delivery Times</a></li>
+              <li class="footer__item-link footer--text"><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item-four">
+            <h3 class="footer__item-header">Interests</h3>
+            <ul class="footer__item-list">
+              <li class="footer__item-link footer--text"><a href="#">Adventure Travel</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Art And Culture</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Wildlife And Nature</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Family Holidays</a></li>
+              <li class="footer__item-link footer--text"><a href="#">Food And Drink</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__inner footer--bottom">
+          <div class="footer__icons">
+            <div class="footer__icons-item">
+              <svg class="twitter">
+                <use xlink:href="img/symbol/sprite.svg#twitter"></use>
+              </svg>
+            </div>
+
+            <div class="footer__icons-item">
+              <svg class="facebook">
+                <use xlink:href="img/symbol/sprite.svg#facebook"></use>
+              </svg>
+            </div>
+
+            <div class="footer__icons-item">
+              <svg class="instagram">
+                <use xlink:href="img/symbol/sprite.svg#instagram"></use>
+              </svg>
+            </div>
+
+            <div class="footer__icons-item">
+              <svg class="linkedin">
+                <use xlink:href="img/symbol/sprite.svg#linkedin"></use>
+              </svg>
+            </div>
+
+            <div class="footer__icons-item">
+              <svg class="youtube">
+                <use xlink:href="img/symbol/sprite.svg#youtube"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </div>
 </body>
