@@ -1,0 +1,100 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+}
+
+.nav_m {
+    margin-top: 50px;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    margin-left: 50%;
+
+}
+
+.nav__item {
+    display: flex;
+
+    margin-bottom: 45px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nav__link {
+    font-family: "inter-medium", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    color: $textDefault;
+
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+
+    transition: all .3s ease;
+    margin-left: auto;
+    width: 100%;
+
+    &:hover {
+        color: $textActive;
+        border-right: 3px solid $blue;
+
+        .nav__icon {
+            fill: $textActive;
+        }
+    }
+}
+
+.nav__icon {
+    margin-right: 25px;
+    fill: $textDefault;
+
+    transition: all .3s ease;
+}
+
+.dashboard {
+    width: 20px;
+    height: 20px;
+}
+
+.all {
+    width: 20px;
+    height: 20px;
+}
+
+.resources {
+    width: 22px;
+    height: 18px;
+}
+
+.friends {
+    width: 22px;
+    height: 20px;
+}
+
+.chat {
+    width: 20px;
+    height: 17.5px;
+}
+
+.settings {
+    width: 22px;
+    height: 22px;
+}
+
+.active-nav {
+    border-right: 3px solid $blue;
+}

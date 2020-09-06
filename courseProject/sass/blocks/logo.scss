@@ -1,0 +1,28 @@
+.logo {
+    font-family: "inter-semibold", sans-serif;
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo__block {
+    width: 48px;
+    height: 48px;
+    padding: 7px;
+    margin-right: 16px;
+
+    background: $blue;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: "playfairD", serif;
+    color: $white;
+}
+
+.logo__text {
+    color: $blue;
+}

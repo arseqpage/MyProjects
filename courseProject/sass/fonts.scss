@@ -1,47 +1,30 @@
 @font-face {
-  font-family: 'roboto_condensedregular';
-  src: url('/fonts/robotocondensed-regular-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-regular-webfont.woff') format('woff');
+  font-family: 'inter-medium';
+  src: url('/fonts/Intermedium.woff2') format('woff2'),
+    url('/fonts/Intermedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'roboto_condensedbold';
-  src: url('/fonts/robotocondensed-bold-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-bold-webfont.woff') format('woff');
+  font-family: 'inter-regular';
+  src: url('/fonts/Interregular.woff2') format('woff2'),
+    url('/fonts/Interregular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'roboto_condensedbold_italic';
-  src: url('/fonts/robotocondensed-bolditalic-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-bolditalic-webfont.woff') format('woff');
+  font-family: 'inter-semibold';
+  src: url('/fonts/Intersemibold.woff2') format('woff2'),
+    url('/fonts/Intersemibold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'roboto_condenseditalic';
-  src: url('/fonts/robotocondensed-italic-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto_condensedlight_italic';
-  src: url('/fonts/robotocondensed-lightitalic-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-lightitalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto_condensedlight';
-  src: url('/fonts/robotocondensed-light-webfont.woff2') format('woff2'),
-  url('/fonts/robotocondensed-light-webfont.woff') format('woff');
+  font-family: 'playfairD';
+  src: url('/fonts/PlayfairDisplay-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
