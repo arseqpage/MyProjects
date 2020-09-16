@@ -94,10 +94,19 @@
 
 .video-item {
     border-radius: 8px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 48%;
 }
 
 .video_w {
     width: 100%;
+    margin-bottom: 45px;
+}
+
+.center__video-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 
