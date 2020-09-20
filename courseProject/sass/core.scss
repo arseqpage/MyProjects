@@ -19,3 +19,15 @@ body {
 	@include min-max(320px, 100%, 0);
 }
 
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.mt_70 {
+	margin-top: 70px;
+}

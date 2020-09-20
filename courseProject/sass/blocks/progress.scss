@@ -1,0 +1,273 @@
+.progress__title {
+    font-family: "inter-semibold", sans-serif;
+    font-size: 18px;
+
+    margin-bottom: 30px;
+    display: block;
+}
+
+.progress__course {
+    display: flex;
+    align-items: center;
+
+    margin-top: 35px;
+}
+
+.progress__course-img {
+    width: 48px;
+    height: 48px;
+
+    position: relative;
+
+    border-radius: 8px;
+}
+
+.ux-img {
+    background: $blueLight;
+}
+
+.progress__course-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.ux-icon {
+    fill: $blue;
+    width: 20px;
+    height: 23px;
+}
+
+.progress__course-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+
+    margin-left: 19px;
+    margin-right: 43px;
+}
+
+.progress__course-title {
+    font-family: "inter-semibold", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: $black;
+}
+
+.progress__course-lvl {
+    font-size: 14px;
+    color: $textDefault;
+    line-height: 1;
+}
+
+progress {
+    border-radius: 8px;
+}
+
+.progress__course-line {
+    width: 104px;
+    height: 8px;
+    border: none;
+
+    margin-left: auto;
+
+    &::-webkit-progress-bar {
+        border-radius: 8px;
+    }
+
+    &::-webkit-progress-value {
+        border-radius: 8px;
+    }
+
+    &::-moz-progress-bar {
+        border-radius: 8px;
+    }
+}
+
+.ux-bar {
+    &::-webkit-progress-bar {
+        background: $blueLight;
+    }
+
+    &::-webkit-progress-value {
+        background: $blue;
+    }
+
+    &::-moz-progress-bar {
+        background: $blue;
+    }
+}
+
+.photo-img {
+    background: rgba($color: $textMint, $alpha: .2)
+}
+
+.photo-icon {
+    width: 23px;
+    height: 19px;
+
+    fill: $textMint;
+}
+
+.photography {
+    &::-webkit-progress-bar {
+        background: rgba($color: $textMint, $alpha: .2)
+    }
+
+    &::-webkit-progress-value {
+        background: $textMint;
+    }
+
+    &::-moz-progress-bar {
+        background: $textMint;
+    }
+}
+
+.animation-img {
+    background: rgba($color: $textOrange, $alpha: .2)
+}
+
+
+.animation-icon {
+    width: 24px;
+    height: 20px;
+
+    fill: $textOrange;
+}
+
+.animation {
+    &::-webkit-progress-bar {
+        background: rgba($color: $textOrange, $alpha: .2)
+    }
+
+    &::-webkit-progress-value {
+        background: $textOrange;
+    }
+
+    &::-moz-progress-bar {
+        background: $textOrange;
+    }
+}
+
+.task-ux-img {
+    background: rgba($color: $blue, $alpha: .2)
+}
+
+.task-ux-icon {
+    width: 20px;
+    height: 17.5px;
+
+    fill: $blue;
+}
+
+.task-anim-img {
+    background: rgba($color: $textOrange, $alpha: .2)
+}
+
+.task-anim-icon {
+    width: 22px;
+    height: 22px;
+
+    fill: $textOrange;
+}
+
+.download {
+    background: $bgGray;
+    overflow: hidden;
+
+    position: relative;
+
+    padding: 21px 26px;
+    height: 204px;
+
+    border-radius: 8px;
+}
+
+.download__title {
+    font-family: 'inter-semibold', sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+    display: block;
+    max-width: 150px;
+}
+
+
+.download__platforms {
+    display: flex;
+}
+
+
+.download__img {
+    width: 40px;
+    height: 40px;
+
+    background: $white;
+    border-radius: 50%;
+
+    position: relative;
+
+    &:first-child {
+        margin-right: 15px;
+    }
+}
+
+.download__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+.google {
+    width: 18px;
+    height: 20px;
+}
+
+.apple {
+    width: 18px;
+    height: 21px;
+}
+
+.download__circle {
+    position: absolute;
+
+
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.big-circle {
+    width: 146px;
+    height: 146px;
+
+    bottom: -25%;
+    left: -10%;
+
+    border: 36px solid $blue;
+}
+
+.small-circle {
+    width: 117px;
+    height: 117px;
+
+    top: -10%;
+    right: -10%;
+
+    border: 25px solid $blue;
+}
+
+.download__person {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+}
