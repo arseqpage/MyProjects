@@ -2,7 +2,6 @@
     padding: 110px 0;
 }
 
-
 .team__text {
     text-align: center;
     max-width: 620px;
@@ -23,14 +22,12 @@
 
 .team__slider {
     margin-top: 100px;
-
 }
 
 .team__slider-item {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .slick-slide {
@@ -56,15 +53,20 @@
 }
 
 .people-one {
-    background: url("../img/team/Clip1.jpg") center;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/1200px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg")
+        center;
+    background-size: cover;
 }
 
 .people-two {
-    background: url("../img/team/Clip2.jpg") center;
+    background: url("https://awsimages.detik.net.id/community/media/visual/2019/08/14/273a412d-33c2-46be-b2a9-4ee033fa1217_43.jpeg?w=700&q=90")
+        center;
+    background-size: cover;
 }
 
 .people-three {
-    background: url("../img/team/Clip3.jpg") center;
+    background: url("https://new-science.ru/wp-content/uploads/2020/05/8658-3.jpg") center;
+    background-size: cover;
 }
 
 .team__people-name {
@@ -95,11 +97,11 @@
     align-items: center;
 
     border-radius: 10px;
-    background-color: #F0F1F1;
+    background-color: #f0f1f1;
 
     margin-right: 20px;
 
-    transition: background .2s linear, fill .3s linear;
+    transition: background 0.2s linear, fill 0.3s linear;
 
     &:last-child {
         margin-right: 0;
@@ -113,7 +115,6 @@
         }
     }
 }
-
 
 .people-icon {
     display: block;
@@ -140,8 +141,6 @@
 
     display: flex;
     justify-content: center;
-
-
 }
 
 .team__slider .slick-dots li {
