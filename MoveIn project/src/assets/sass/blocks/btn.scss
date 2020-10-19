@@ -1,0 +1,16 @@
+.btn {
+    @include btn;
+
+    padding: 10px;
+    border-radius: $radius;
+    color: $black;
+    background-color: #fff;
+
+    &:hover {
+        background-color: $gray;
+    }
+
+    .header--fixed & {
+        background-color: red;
+    }
+}

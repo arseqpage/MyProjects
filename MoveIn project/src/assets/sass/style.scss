@@ -1,0 +1,24 @@
+/* Variables */
+
+@import "vars";
+
+/* Mixins */
+
+@import "mixins";
+
+/* Bootstrap */
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/buttons";
+
+/* Blocks */
+
+@import "blocks/header";
+@import "blocks/btn";
+
+/* Vendor libs*/
+
+@import "vendor/slick";
