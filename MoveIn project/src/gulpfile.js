@@ -25,20 +25,22 @@ var path = {
         css: "dist/assets/css",
         images: "dist/assets/img",
         fonts: "dist/assets/fonts"
+    
     },
     src: {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/style.scss",
         images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
-        fonts: "src/assets/fonts/*.woff"
+        fonts: "src/assets/fonts/*"
+        
     },
     watch: {
         html: "src/**/*.html",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
         images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
-        fonts: "src/assets/fonts/*.woff"
+        fonts: "src/assets/fonts/*"
     },
     clean: "./dist"
 }
@@ -60,10 +62,7 @@ function browserSyncReload(done) {
     browsersync.reload();
 }
 
-function fonts() {
-    return src(path.src.fonts)
-    .pipe(dest(path.build.fonts));
-}
+
 
 function html() {
     panini.refresh();
@@ -125,6 +124,11 @@ function images() {
     .pipe(dest(path.build.images));
 }
 
+function fonts() {
+    return src(path.src.fonts)
+    .pipe(dest(path.build.fonts));
+}
+
 function clean() {
     return del(path.clean)
 }
@@ -137,7 +141,7 @@ function watchFiles() {
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, fonts, gulp.parallel(html, css, js, images));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
