@@ -23,19 +23,24 @@ var path = {
         html: "dist/",
         js: "dist/assets/js",
         css: "dist/assets/css",
-        images: "dist/assets/img"
+        images: "dist/assets/img",
+        fonts: "dist/assets/fonts"
+    
     },
     src: {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/style.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        fonts: "src/assets/fonts/*"
+        
     },
     watch: {
         html: "src/**/*.html",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        fonts: "src/assets/fonts/*"
     },
     clean: "./dist"
 }
@@ -56,6 +61,8 @@ function browserSync(done) {
 function browserSyncReload(done) {
     browsersync.reload();
 }
+
+
 
 function html() {
     panini.refresh();
@@ -79,6 +86,7 @@ function css() {
     .pipe(autoprefixer({
         cascade: true
    }))
+   .pipe(stripcsscomments())
     .pipe(cssbeautify())
     .pipe(dest(path.build.css))
     .pipe(cssnano({
@@ -116,6 +124,11 @@ function images() {
     .pipe(dest(path.build.images));
 }
 
+function fonts() {
+    return src(path.src.fonts)
+    .pipe(dest(path.build.fonts));
+}
+
 function clean() {
     return del(path.clean)
 }
@@ -125,13 +138,15 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
+    gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images));
-const watch = gulp.parallel(build, watchFiles, browserSync)
+const build = gulp.series(clean, fonts, gulp.parallel(html, css, js, images));
+const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
 /* Exports Tasks*/
+exports.fonts = fonts;
 exports.html = html;
 exports.css = css;
 exports.js = js;

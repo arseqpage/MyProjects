@@ -142,7 +142,7 @@ function watchFiles() {
 }
 
 const build = gulp.series(clean, fonts, gulp.parallel(html, css, js, images));
-const watch = gulp.parallel(build, watchFiles, browserSync);
+const watch = gulp.parallel(build, watchFiles, browserSync);gulp
 
 
 /* Exports Tasks*/
