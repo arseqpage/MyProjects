@@ -1,3 +1,7 @@
+/* Fonts */
+
+@import "fonts";
+
 /* Variables */
 
 @import "vars";
@@ -5,6 +9,31 @@
 /* Mixins */
 
 @import "mixins";
+
+/* Default styles */
+
+html {
+    font-size: 15px;
+}
+body {
+    margin: 0;
+
+    font-family: 'Futura', sans-serif;
+    color: $black;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
 
 /* Bootstrap */
 
@@ -17,6 +46,8 @@
 /* Blocks */
 
 @import "blocks/header";
+@import "blocks/nav";
+@import "blocks/logo";
 
 
 /* Vendor libs*/

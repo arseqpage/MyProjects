@@ -1,3 +1,50 @@
+@font-face {
+    font-family: 'Futura_md';
+    src: url("../fonts/FuturaPT-Medium.eot");
+    src: local("Futura PT Medium"), local("FuturaPT-Medium"), url("../fonts/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Medium.woff") format("woff"), url("../fonts/FuturaPT-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+  src: url("../fonts/FuturaPT-Book.eot");
+  src: local("Futura PT"), local("FuturaPT"), url("../fonts/FuturaPT-Book.eot") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura_light';
+  src: url("../fonts/FuturaPT-Light.eot");
+  src: local("Futura PT Light"), local("FuturaPT-Light"), url("../fonts/FuturaPT-Light.eot") format("embedded-opentype"), url("../fonts/FuturaPT-Light.woff") format("woff"), url("../fonts/FuturaPT-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+    color: #1d1c1c;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .container,
 .container-fluid,
 .container-sm,
@@ -1770,14 +1817,85 @@ input[type="button"].btn-block {
 
 .header {
     width: 100%;
-    padding: 10px;
+    padding: 1.3rem;
     background-color: #2c2c2c;
 }
 
-.header__title {
-    margin: 0;
-    font-size: 36px;
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    width: 20%;
+}
+
+.nav__main {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.06rem;
+    color: #878787;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Futura_md', sans-serif;
+}
+
+.nav__main-item {
+    transition: all .3s linear;
+    margin: 0 2.23rem;
+}
+
+.nav__main-item:hover {
     color: #fff;
+}
+
+.nav__main-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__contacts {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-size: 1.06rem;
+    color: #878787;
+    font-weight: 500;
+    font-family: 'Futura_md', sans-serif;
+}
+
+.nav__contacts-item {
+    margin-left: 4.46rem;
+    transition: all .3s linear;
+}
+
+.nav__contacts-item:first-child {
+    margin-left: 0;
+}
+
+.nav__contacts-item:hover {
+    color: #fff;
+}
+
+.nav__contacts-link {
+    color: inherit;
+}
+
+.nav__contacts-link--phone {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.06rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo--orange {
+    color: #a26b57;
 }
 
 
