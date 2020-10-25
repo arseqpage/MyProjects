@@ -22,6 +22,8 @@ body {
     color: $black;
     font-size: 1rem;
     line-height: 1.5;
+
+    background-color: $black;
 }
 
 *,
@@ -33,6 +35,13 @@ body {
 ul {
     margin: 0;
     padding: 0;
+}
+
+.page {
+    border-right: 20px solid $primary;
+    border-bottom: 20px solid $primary;
+    border-left: 20px solid $primary;
+    min-height: 100vh;
 }
 
 /* Bootstrap */
@@ -48,6 +57,9 @@ ul {
 @import "blocks/header";
 @import "blocks/nav";
 @import "blocks/logo";
+@import "blocks/main";
+@import "blocks/portfolio";
+@import "blocks/slider";
 
 
 /* Vendor libs*/
