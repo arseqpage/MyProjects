@@ -1,0 +1,89 @@
+.price {
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.price__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.price__item {
+  width: 33%;
+  padding: 140px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $primary;
+}
+
+.price__title {
+  font-size: 1.6rem;
+  font-family: "Futura_light", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: $white;
+
+  margin-bottom: 70px;
+}
+
+.price__line {
+  width: 100%;
+  height: 1px;
+
+  background-color: $orange;
+
+  margin-bottom: 60px;
+}
+
+.price__list {
+  list-style: none;
+  color: $gray;
+  font-size: 1rem;
+  font-family: "Futura", sans-serif;
+}
+
+.price__list-item {
+  &::before {
+    content: "—";
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+.price__list-vip {
+  color: $orange;
+
+  &::before {
+    content: "+" !important;
+    margin-right: 10px;
+  }
+}
+
+.price__item-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.price__num {
+  font-size: 1.6rem;
+  font-family: "Futura_light", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: $white;
+}
+
+.price__num-m {
+  text-transform: lowercase;
+  color: $gray;
+
+  margin-right: 55px;
+}

@@ -13,35 +13,35 @@
 /* Default styles */
 
 html {
-    font-size: 15px;
+  font-size: 15px;
 }
 body {
-    margin: 0;
+  margin: 0;
 
-    font-family: 'Futura', sans-serif;
-    color: $black;
-    font-size: 1rem;
-    line-height: 1.5;
+  font-family: "Futura", sans-serif;
+  color: $black;
+  font-size: 1rem;
+  line-height: 1.5;
 
-    background-color: $black;
+  background-color: $black;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .page {
-    border-right: 20px solid $primary;
-    border-bottom: 20px solid $primary;
-    border-left: 20px solid $primary;
-    min-height: 100vh;
+  border-right: 20px solid $black;
+  border-bottom: 20px solid $black;
+  border-left: 20px solid $black;
+  min-height: 100vh;
 }
 
 /* Bootstrap */
@@ -60,7 +60,7 @@ ul {
 @import "blocks/main";
 @import "blocks/portfolio";
 @import "blocks/slider";
-
+@import "blocks/price";
+@import "blocks/button";
 
 /* Vendor libs*/
-

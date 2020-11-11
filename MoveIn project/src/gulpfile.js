@@ -13,9 +13,10 @@ const rename = require("gulp-rename");
 const rigger = require("gulp-rigger");
 const sass = require( "gulp-sass");
 const stripcsscomments = require("gulp-strip-css-comments");
-const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify-es").default;
 const panini = require("panini");
 const removeComments = require("gulp-strip-css-comments");
+const babel = require('gulp-babel');
 
 
 var path = {

@@ -1,6 +1,12 @@
 .portfolio {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0 0;
     position: relative;
+
+    &:hover {
+        .portfolio__item-img {
+            opacity: .75;
+        }
+    }
 }
 
 .portfolio__item {
@@ -11,17 +17,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+   
 }
 
 .portfolio__item-title {
-    text-transform: uppercase;
+    visibility: hidden;
     font-size: 0;
     color: transparent;   
-    font-family: 'Futura_md', sans-serif;
-    font-weight: 500;
-    
-    visibility: hidden;
 }
+
+
 
 .portfolio__item-img {
     position: absolute;
@@ -32,6 +38,8 @@
     
     width: 100%;
     z-index: -1;
+
+    transition: all .2s linear;
 }
 
 .portfolio__item-about {
@@ -50,3 +58,6 @@
     }
 }
 
+.active-slide {
+    display: flex;
+}
