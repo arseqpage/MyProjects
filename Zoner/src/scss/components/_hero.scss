@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 100vh;
+  height: 1080px;
   min-height: 700px;
 
   background-color: var(--quil-gray);
@@ -102,10 +103,18 @@
   left: 40px;
   bottom: 50px;
   padding: 10px;
-  max-width: 280px;
+  width: 280px;
 
   background-color: var(--color-white);
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+
+  transform: translateX(-150vw);
+  transition: transform 0.5s ease-out;
+
+  &--visible {
+    transform: translateX(0);
+    transition: transform 0.5s ease-out;
+  }
 
   &__text {
     margin-left: 10px;
@@ -131,6 +140,7 @@
     font-size: 15px;
     margin: 0;
     margin-bottom: 7px;
+    min-height: 34px;
     padding-right: 20px;
   }
 
