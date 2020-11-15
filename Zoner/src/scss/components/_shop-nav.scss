@@ -1,7 +1,6 @@
 .shop-nav {
   display: flex;
   align-items: center;
-  
 
   &__link {
     display: inline-block;
@@ -35,20 +34,6 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-
-  &__quantity {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 5px;
-    height: 16px;
-
-    border-radius: 25px;
-
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--color-white);
-    background-color: var(--color-dark);
-  }
 }
 
 .search-form {
@@ -61,4 +46,18 @@
     background-repeat: no-repeat;
     background-image: url("../../img/search.png");
   }
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 5px;
+  height: 16px;
+
+  border-radius: 25px;
+
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-dark);
 }
