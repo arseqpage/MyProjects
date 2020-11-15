@@ -12,4 +12,5 @@ export default {
   $catalogGridContent: document.querySelector(".catalog-grid__content"),
   $catalogFilterItems: document.querySelectorAll(".catalog-filter__item"),
   $catalogChoise: document.querySelector(".catalog-choise"),
+  $customSelect: document.querySelectorAll(".custom-select"),
 };

@@ -2,9 +2,14 @@
   padding-top: 130px;
 
   &__slider {
+    position: relative;
     overflow: hidden;
     background: #f8f8f8;
     width: 100%;
+  }
+
+  &__container {
+    position: relative;
   }
 }
 
@@ -35,6 +40,12 @@
     align-items: center;
   }
 
+  &__image {
+    position: absolute;
+    right: 19%;
+    bottom: 0;
+  }
+
   &__link {
     display: inline-block;
     margin-right: 11px;
@@ -56,4 +67,45 @@
       background: transparent;
     }
   }
+}
+
+.hero-prev-btn,
+.hero-next-btn {
+  position: absolute;
+  z-index: 5;
+  left: 30px;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-dark);
+
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+
+  border: 2px solid var(--color-dark);
+  cursor: pointer;
+  svg {
+    width: 40px;
+    height: 20px;
+
+    fill: currentColor;
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    background-color: var(--color-dark);
+
+    svg {
+      fill: var(--color-white);
+    }
+  }
+}
+
+.hero-next-btn {
+  left: auto;
+  right: 30px;
 }

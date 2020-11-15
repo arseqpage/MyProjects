@@ -3,10 +3,41 @@
 
   &__image {
     margin-bottom: 20px;
+    position: relative;
+
     img {
       max-height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__sale {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    padding: 5px 13px;
+
+    border: 2px solid var(--color-dark);
+
+    color: var(--color-dark);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__prop {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 15px;
+
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-transform: uppercase;
+
+    background-position: left center;
+    background-repeat: no-repeat;
   }
 
   &__title {
@@ -33,4 +64,21 @@
     font-size: 13px;
     font-weight: 700;
   }
+
+  &__oldprice {
+    margin-left: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #959595;
+    text-decoration: line-through;
+  }
+}
+
+.new {
+  background-image: url("../../img/new.png");
+}
+
+.best {
+  background-image: url("../../img/best-seller.png");
 }
