@@ -36,3 +36,41 @@
     }
   }
 }
+
+.breadcrumbs .card-prev,
+.breadcrumbs .card-next {
+  display: none;
+}
+
+.card {
+  .breadcrumbs .card-prev,
+  .breadcrumbs .card-next {
+    display: inline-block;
+
+    color: var(--color-gray);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+
+  .breadcrumbs .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumbs__list {
+    border-bottom: none;
+  }
+
+  .card-prev {
+    margin-left: auto;
+  }
+
+  .card-next {
+    margin-left: 20px;
+  }
+}

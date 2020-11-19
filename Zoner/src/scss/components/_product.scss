@@ -27,17 +27,7 @@
   }
 
   &__prop {
-    display: inline-block;
     margin-bottom: 10px;
-    padding-left: 15px;
-
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--color-dark);
-    text-transform: uppercase;
-
-    background-position: left center;
-    background-repeat: no-repeat;
   }
 
   &__title {
@@ -73,6 +63,19 @@
     color: #959595;
     text-decoration: line-through;
   }
+}
+
+.product-prop {
+  display: inline-block;
+  padding-left: 15px;
+
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-dark);
+  text-transform: uppercase;
+
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .new {

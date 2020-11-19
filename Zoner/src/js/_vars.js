@@ -13,4 +13,11 @@ export default {
   $catalogFilterItems: document.querySelectorAll(".catalog-filter__item"),
   $catalogChoise: document.querySelector(".catalog-choise"),
   $customSelect: document.querySelectorAll(".custom-select"),
+  $freeDeliveryBtn: document.querySelector(".free-delivery__btn"),
+  $colorSelectSelected: document.querySelector(".color-select__selected"),
+  $colorSelect: document.querySelector(".color-select"),
+  $sizeSelect: document.querySelector(".size-select"),
+  $stepper: document.querySelector(".stepper"),
+  $cardSliderThumbs: document.querySelector(".card-slider__thumbs"),
+  $sliderImg: document.querySelector(".card-slider__main img"),
 };

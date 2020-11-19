@@ -15,6 +15,11 @@
     &:nth-child(2) {
       margin-left: -60px;
     }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -36,6 +41,23 @@
         }
       }
     }
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+
+    &-caption {
+      margin-right: 14px;
+      font-size: 13px;
+      color: var(--color-gray);
+    }
+  }
+
+  &__copy {
+    font-size: 13px;
+    color: var(--color-dark);
   }
 
   &__link {
@@ -148,7 +170,7 @@
     width: 16px;
     height: 16px;
     background-position: center;
-    background-size: cover;
+
     background-repeat: no-repeat;
 
     &--tw {
@@ -166,5 +188,25 @@
     &--pt {
       background-image: url("../../img/pinterest.png");
     }
+  }
+}
+
+.footer-2 {
+  .footer__top {
+    border-top: 1px solid #eee;
+    padding-top: 43px;
+    padding-bottom: 19px;
+    padding-left: 10px;
+  }
+
+  .footer__column:nth-child(2) {
+    margin-left: 200px;
+  }
+
+  .footer__bottom {
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
   }
 }

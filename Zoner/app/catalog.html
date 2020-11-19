@@ -11,7 +11,18 @@
   </head>
   <body>
     <div class="site-container">
-      <header class="header catalog-header">
+      <div class="free-delivery">
+        Free delivery from $60 and free returns
+
+        <button class="free-delivery__btn btn-reset">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      
+
+<header class="header catalog-header">
   <div class="container header__container container-narrow">
     <nav class="nav header__nav">
       <ul class="nav__list">
@@ -129,6 +140,10 @@
         >
       </li>
     </ul>
+
+    <a class="card-prev" href="#">Prev</a>
+<a class="card-next" href="#">Next</a>
+
   </div>
 </div>
 
@@ -420,7 +435,7 @@
           <div class="product__image">
             <img src="img/product_1.jpg" alt="Prod 1" />
           </div>
-          <span class="product__prop new"> New </span>
+          <span class="product-prop product__prop new"> New </span>
           <h3 class="product__title">
             <a href="#">Eye Mesh Boat Shoes</a>
           </h3>
@@ -466,7 +481,7 @@
             <span class="product__sale">Sale</span>
             <img src="img/product_1.jpg" alt="Prod 1" />
           </div>
-          <span class="product__prop best"> Best seller </span>
+          <span class="product-prop product__prop best"> Best seller </span>
           <h3 class="product__title">
             <a href="#">Eye Mesh Boat Shoes</a>
           </h3>
@@ -479,7 +494,7 @@
           <div class="product__image">
             <img src="img/product_1.jpg" alt="Prod 1" />
           </div>
-          <span class="product__prop new"> New </span>
+          <span class="product-prop product__prop new"> New </span>
           <h3 class="product__title">
             <a href="#">Eye Mesh Boat Shoes</a>
           </h3>
@@ -525,7 +540,7 @@
             <span class="product__sale">Sale</span>
             <img src="img/product_1.jpg" alt="Prod 1" />
           </div>
-          <span class="product__prop best"> Best seller </span>
+          <span class="product-prop product__prop best"> Best seller </span>
           <h3 class="product__title">
             <a href="#">Eye Mesh Boat Shoes</a>
           </h3>
@@ -550,7 +565,7 @@
             <span class="product__sale">Sale</span>
             <img src="img/product_1.jpg" alt="Prod 1" />
           </div>
-          <span class="product__prop best"> Best seller </span>
+          <span class="product-prop product__prop best"> Best seller </span>
           <h3 class="product__title">
             <a href="#">Eye Mesh Boat Shoes</a>
           </h3>
@@ -586,88 +601,11 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer footer-2">
   <div class="container footer__container">
     <div class="footer__content">
       <div class="footer__top">
         <div class="footer__column">
-          <h3 class="footer__title">Customer service</h3>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="tel:+866.597.2742"
-                >Phone: +866.597.2742</a
-              >
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Live chat</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">About Us</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#"> Terms & Conditions </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__column">
-          <h3 class="footer__title">Company</h3>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="#">What We Do</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Available Services</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Latest Posts</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">FAQs</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__column">
-          <h3 class="footer__title">Our newsletter</h3>
-
-          <form class="footer__form subscribe-form" action="#">
-            <h4 class="subscribe-form__title">
-              Join our list and get 15% off your first purchase!
-            </h4>
-            <label class="subscribe-form__field">
-              <input type="email" required placeholder="Email address" />
-              <button class="btn-reset subscribe-form__btn" type="submit">
-                Subscribe
-              </button>
-            </label>
-          </form>
-          <span class="footer__text">*Don’t worry we don’t spam</span>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <div class="footer__left">
-          <ul class="footer__list footer__list--row">
-            <li class="footer__item">
-              <a class="footer__link footer__link--row" href="#"
-                >Returns Policy</a
-              >
-            </li>
-            <li class="footer__item">
-              <a class="footer__link footer__link--row" href="#"
-                >Privacy Policy</a
-              >
-            </li>
-            <li class="footer__item">
-              <a class="footer__link footer__link--row" href="#"
-                >Privacy Policy</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer__right">
           <ul class="social footer__social">
             <li class="social__item">
               <a
@@ -698,6 +636,68 @@
               ></a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer__column">
+          <ul class="footer__list footer__list--row">
+            <li class="footer__item">
+              <a class="footer__link footer__link--row" href="#"
+                >Returns Policy</a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__link footer__link--row" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__link footer__link--row" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__column footer__column--flex">
+          <div class="footer__select">
+            <span class="footer__select-caption">Currency</span>
+            <div class="custom-select custom-select--footer" tabindex="0">
+              <div class="custom-select__top">USD</div>
+              <div class="custom-select__dropdown">
+                <ul class="custom-select__list">
+                  <li class="custom-select__item">USD</li>
+                  <li class="custom-select__item">EUR</li>
+                  <li class="custom-select__item">RUB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__select">
+            <span class="footer__select-caption">Language</span>
+            <div class="custom-select custom-select--footer" tabindex="0">
+              <div class="custom-select__top">English</div>
+              <div class="custom-select__dropdown">
+                <ul class="custom-select__list">
+                  <li class="custom-select__item">English</li>
+                  <li class="custom-select__item">Russian</li>
+                  <li class="custom-select__item">French</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__left">
+          <small class="footer__copy">
+            &copy; 2019 Zonex All rights reserved
+          </small>
+        </div>
+
+        <div class="footer__right">
+          <img src="img/payment.png" aria-hidden="true" alt="Payment" />
         </div>
       </div>
     </div>

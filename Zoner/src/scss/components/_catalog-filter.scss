@@ -415,6 +415,22 @@
       display: block;
     }
   }
+
+  &--footer {
+    min-width: auto;
+
+    .custom-select__top {
+      padding-right: 15px;
+      padding-bottom: 0;
+      border-bottom: none;
+
+      font-size: 13px;
+
+      &::after {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .pagination {
