@@ -4,15 +4,19 @@
   &__image {
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
 
     img {
-      max-height: 100%;
+      width: 100%;
       object-fit: cover;
+
+      transition: transform 0.3s;
     }
   }
 
   &__sale {
     position: absolute;
+    z-index: 20;
     left: 20px;
     top: 20px;
 
@@ -63,6 +67,23 @@
     color: #959595;
     text-decoration: line-through;
   }
+
+  &:hover {
+    .product__image {
+      img {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+    }
+
+    .product-custom__price {
+      transform: translateY(-100%);
+    }
+
+    .product-custom__cart {
+      transform: translateY(-100%);
+    }
+  }
 }
 
 .product-prop {
@@ -84,4 +105,24 @@
 
 .best {
   background-image: url("../../img/best-seller.png");
+}
+
+.product-custom {
+  height: 18px;
+  overflow: hidden;
+
+  &__price {
+    transition: transform 0.3s;
+  }
+
+  .to-cart {
+    font-weight: 700;
+    font-size: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__cart {
+    transition: transform 0.3s;
+  }
 }

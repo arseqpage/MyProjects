@@ -11,6 +11,10 @@
   &__container {
     position: relative;
   }
+
+  @include xs {
+    padding-top: 60px;
+  }
 }
 
 .catalog-slide {
@@ -38,12 +42,23 @@
   &__btns {
     display: flex;
     align-items: center;
+
+    @include xs {
+      display: block;
+      padding-bottom: 20px;
+    }
   }
 
   &__image {
     position: absolute;
     right: 19%;
     bottom: 0;
+
+    @include md {
+      right: 6%;
+      width: 25%;
+      display: none;
+    }
   }
 
   &__link {
@@ -58,6 +73,17 @@
 
       color: var(--color-white);
       background: var(--color-dark);
+
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid var(--color-dark);
+
+        color: var(--color-dark);
+        background: transparent;
+
+        transition: all 0.3s;
+      }
     }
 
     &--light {
@@ -65,7 +91,30 @@
 
       color: var(--color-dark);
       background: transparent;
+
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid var(--color-dark);
+
+        color: var(--color-white);
+        background: var(--color-dark);
+
+        transition: all 0.3s;
+      }
+
+      @include xs {
+        margin-top: 20px;
+      }
     }
+  }
+
+  @include sm {
+    padding: 80px;
+  }
+
+  @include xs {
+    padding: 20px;
   }
 }
 
@@ -103,9 +152,25 @@
       fill: var(--color-white);
     }
   }
+
+  @include sm {
+    left: 10px;
+  }
+
+  @include xs {
+    display: none;
+  }
 }
 
 .hero-next-btn {
   left: auto;
   right: 30px;
+
+  @include sm {
+    right: 10px;
+  }
+
+  @include xs {
+    display: none;
+  }
 }

@@ -31,6 +31,13 @@
     text-transform: uppercase;
     font-size: 10px;
 
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-dark);
+      transition: color 0.3s;
+    }
+
     &--current {
       color: var(--color-dark);
     }
@@ -60,14 +67,27 @@
   .breadcrumbs .container {
     display: flex;
     align-items: center;
+
+    @include xs {
+      flex-wrap: wrap;
+    }
   }
 
   .breadcrumbs__list {
     border-bottom: none;
+
+    @include xs {
+      width: 100%;
+      margin-bottom: 0;
+    }
   }
 
   .card-prev {
     margin-left: auto;
+
+    @include xs {
+      margin-left: 0;
+    }
   }
 
   .card-next {

@@ -22,7 +22,9 @@ if (document.querySelector(".catalog")) {
       vars.$catalogGridContent.dataset.gridColumns = columns;
     }
   });
+}
 
+if (vars.$customSelect) {
   vars.$customSelect.forEach((el) => {
     el.addEventListener("click", (e) => {
       e.currentTarget.classList.toggle("custom-select--open");
@@ -33,12 +35,12 @@ if (document.querySelector(".catalog")) {
       }
     });
 
-    el.addEventListener("focus", (e) => {
-      e.currentTarget.classList.add("custom-select--open");
-    });
+    // el.addEventListener("focus", (e) => {
+    //   e.currentTarget.classList.add("custom-select--open");
+    // });
 
-    el.addEventListener("blur", (e) => {
-      e.currentTarget.classList.remove("custom-select--open");
-    });
+    // el.addEventListener("blur", (e) => {
+    //   e.currentTarget.classList.remove("custom-select--open");
+    // });
   });
 }

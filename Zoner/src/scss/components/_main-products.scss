@@ -2,6 +2,10 @@
   &__container {
     padding-top: 70px;
     padding-bottom: 30px;
+
+    @include md {
+      margin-bottom: 0px;
+    }
   }
 
   &__nav {
@@ -12,6 +16,10 @@
 
   &__item {
     margin-right: 30px;
+
+    @include xs {
+      margin: 0 10px;
+    }
   }
 
   &__btn {
@@ -21,6 +29,14 @@
       &::before {
         opacity: 1;
       }
+    }
+
+    @include sm {
+      font-size: 20px;
+    }
+
+    @include xs {
+      font-size: 15px;
     }
   }
 
@@ -38,6 +54,8 @@
     align-items: center;
     flex-direction: column;
 
+    transition: transform 0.2s;
+
     span {
       display: inline-block;
       margin-bottom: 12px;
@@ -48,6 +66,17 @@
       height: 21px;
       fill: var(--color-dark);
     }
+
+    &:hover {
+      svg {
+        transform: translateY(5px);
+        transition: transform 0.2s;
+      }
+    }
+
+    @include md {
+      margin-top: 0px;
+    }
   }
 }
 
@@ -56,15 +85,55 @@
   flex-wrap: wrap;
 
   &__item {
-    margin-right: 30px;
+    margin-right: 1.8%;
     margin-bottom: 80px;
+
+    width: 18.5%;
 
     &:nth-child(5n) {
       margin-right: 0;
+
+      @include md {
+        margin-right: 5%;
+      }
+
+      @include xs {
+        margin-right: 4%;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include md {
+        margin-right: 0;
+      }
+
+      @include xs {
+        margin-right: 4%;
+      }
     }
 
     &:nth-last-child(-n + 5) {
       margin-bottom: 0;
+
+      @include md {
+        margin-bottom: 50px;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include xs {
+        margin-right: 0;
+      }
+    }
+
+    @include md {
+      margin-right: 5%;
+      width: 30%;
+    }
+
+    @include xs {
+      width: 48%;
+      margin-right: 4%;
     }
   }
 }

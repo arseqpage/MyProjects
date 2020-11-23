@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  overflow-anchor: none;
   margin: 0;
   font-family: "Jost", sans-serif;
   background-color: var(--color-white);
@@ -75,6 +76,10 @@ ul {
   margin: 0 auto;
   padding: 0 40px;
   //max-width: 1200px;
+
+  @include xs {
+    padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -114,4 +119,31 @@ ul {
 
 .container-narrow {
   max-width: 1406px;
+}
+
+.to-top {
+  padding: 14px 18px;
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+
+  transition: scale 0.3s;
+
+  svg {
+    width: 12px;
+    height: 21px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
 }

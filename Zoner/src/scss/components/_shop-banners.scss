@@ -4,6 +4,10 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+
+    @include xs {
+      flex-direction: column;
+    }
   }
 }
 
@@ -41,6 +45,14 @@
 
     font-size: 48px;
     font-weight: 500;
+
+    @include md {
+      font-size: 40px;
+    }
+
+    @include sm {
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -56,5 +68,16 @@
 
   &--woman {
     background-image: url("../../img/banner2.jpg");
+  }
+
+  @include md {
+    padding: 30px;
+    min-height: 300px;
+  }
+
+  @include xs {
+    width: 100%;
+
+    min-height: 250px;
   }
 }
