@@ -1,0 +1,88 @@
+.hero {
+  padding-top: 125px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background: url('../img/main.png');
+    background-repeat: no-repeat;
+
+    right: 0;
+    top: 87px;
+    width: 844px;
+    height: 830px;
+    z-index: 3;
+  }
+
+  
+}
+
+.hero__block {
+  position: relative;
+}
+
+.hero__title {
+  max-width: 818px;
+  margin-bottom: 28px;
+
+  font-family: 'CircularStd', sans-serif;
+  font-size: 85px;
+  line-height: 1.12;
+  color: var(--color-title);
+}
+
+.hero__descr {
+  max-width: 716px;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: var(--color-gray);
+}
+
+
+.hero__links {
+  display: flex;
+  align-items: center;
+}
+
+.hero-btn {
+  padding: 25px 65px;
+  padding-bottom: 27px;
+  padding-right: 64px;
+  padding-left: 62px;
+  margin-left: -3px;
+
+  background-color: var(--color-purple);
+
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 1.16;
+}
+
+.hero__custom {
+  margin-left: 12px;
+
+  font-weight: 400;
+  line-height: 1.37;
+  color: var(--color-gray);
+
+  &-link {
+
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #299EF3;
+
+  }
+}
+
+.hero__img {
+  position: absolute;
+  top: -95px;
+  right: -220px;
+
+}
