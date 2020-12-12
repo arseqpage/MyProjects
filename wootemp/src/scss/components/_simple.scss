@@ -94,6 +94,7 @@
     margin-bottom: 5px;
 
     font-family: 'CircularStd', sans-serif;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.94;
     color: var(--color-title);
@@ -113,5 +114,24 @@
     color: var(--color-blue);
     font-size: 18px;
     line-height: 1.38;
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      backface-visibility: hidden;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }

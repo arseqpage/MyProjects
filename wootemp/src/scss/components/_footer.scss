@@ -1,8 +1,22 @@
 .footer {
+  position: relative;
+
   padding: 53px 0;
   padding-bottom: 0;
 
   background-color: var(--color-purple);
+
+  &::before {
+    z-index: 5;
+    content: '';
+    position: absolute;
+    right: 144px;
+    top: -64px;
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    border: 5px solid #FFBA49;
+  }
 }
 
 .footer__container-top {
@@ -13,14 +27,14 @@
 .footer__top {
   max-width: 1227px;
   margin: 0 auto;
-  padding-bottom: 46px;
+  padding-bottom: 50px;
 
   display: flex;
   flex-direction: column;
 
   color: white;
 
-  border-bottom: 1px solid #9A7DFF;
+
 }
 
 .footer__bonus {
@@ -68,7 +82,7 @@
 
 .footer__center {
   padding-top: 35px;
-  padding-bottom: 64px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
 
@@ -83,18 +97,41 @@
 }
 
 .footer__list-item {
-  margin-bottom: 5px;
+  margin-bottom: 5.5px;
 
   &-link {
+    display: inline-block;
     font-size: 12px;
     line-height: 1;
     color: var(--color-white);
+
+    position: relative;
+
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      backface-visibility: hidden;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
   }
 }
 
 
 .footer__bottom {
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 25px;
 
   background-color: var(--color-white);
@@ -110,10 +147,19 @@
 .footer__social {
   display: flex;
 
-  &-icon {
+  &-link {
     margin-right: 54px;
+  }
+
+  &-icon {
 
     fill: var(--color-black);
+    transition: fill .2s, transform .2s;
+
+    &:hover {
+      fill: var(--color-purple);
+      transform: scale(1.1);
+    }
 
     &-tw {
       width: 25px;

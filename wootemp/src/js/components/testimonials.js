@@ -10,6 +10,9 @@ var testimSlider = new Swiper('.testimonials-slider__block', {
   slidesPerView: 1,
 
   effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 
   navigation: {
     nextEl: '.testimonals__arrow--next',

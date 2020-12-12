@@ -44,39 +44,92 @@
     text-decoration: none;
     color: var(--color-black);
 
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      backface-visibility: hidden;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
   }
 }
 
 
 .nav-user {
+  padding-top: 3px;
+
   &__list {
     display: flex;
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
 
   &__item {
     &:not(:first-child) {
-      margin-left: 30px;
+      margin-left: 29px;
     }
   }
 
   &__login {
     text-decoration: none;
     color: var(--color-black);
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      display: block;
+      backface-visibility: hidden;
+      transition: all .3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 
   &__start {
-    padding: 14px 13.5px;
-    padding-bottom: 10px;
+    padding: 12px 14px 13px;
     margin-left: 11px;
+
+    display: inline-block;
 
     border-radius: $radius-sm;
     background-color: var(--color-purple);
 
+
     color: var(--color-white);
+
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
   }
 
   &__search {
+    display: flex;
+
     &-btn {
       width: 16px;
       height: 16px;

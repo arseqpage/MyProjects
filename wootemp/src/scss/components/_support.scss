@@ -1,5 +1,11 @@
+.support {
+  padding-top: 70px;
+
+}
+
 .support__container {
   max-width: 1468px;
+
 }
 
 .support__text {
@@ -14,6 +20,7 @@
 
 .support__title {
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .support__descr {
@@ -26,10 +33,24 @@
 .support__team {
   padding-top: 12px;
   width: 100%;
+  position: relative;
 
   &-img {
     width: 100%;
     object-fit: none;
+  }
+
+  &::before {
+    position: absolute;
+    left: -158px;
+    top: 31px;
+    z-index: -1;
+    content: '';
+    background: url('../img/support-dots.png');
+    width: 1693px;
+    height: 381px;
+
+
   }
 }
 
@@ -39,7 +60,7 @@
   padding-bottom: 78px;
 
   position: relative;
-  z-index: 10;
+  z-index: 5;
 
   background-color: #5F37EF;
 
@@ -72,6 +93,13 @@
 
     color: var(--color-white);
     text-transform: uppercase;
+
+    transition: all .3s;
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
 
   }
 }
