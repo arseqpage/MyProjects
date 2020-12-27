@@ -1,10 +1,14 @@
 .testimonials {
   padding-top: 120px;
-  padding-bottom: 300px;
+  padding-bottom: 339px;
   background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%, rgba(236, 240, 253, 0.53) 14.32%, #ECF0FD 45.83%, rgba(236, 240, 253, 0.43) 84.33%, rgba(236, 240, 253, 0) 100%);
   position: relative;
   z-index: 1;
 
+
+  @include md {
+    padding-bottom: 135px;
+  }
 
 }
 
@@ -27,6 +31,10 @@
     height: 739px;
     background: url('../img/testim-people.png');
     background-size: cover;
+
+    @include lg-max {
+      display: none;
+    }
   }
 
   &::after {
@@ -38,13 +46,25 @@
     width: 979px;
     height: 495px;
     background: url('../img/dots-slide-2.png');
+
+    @include lg-max {
+      top: -55px;
+      left: 100px;
+    }
+
+    @include md {
+      display: none;
+    }
   }
 }
 
 .testimonials-slider__block {
   position: relative;
 
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
+  max-height: 391px;
+  height: 100%;
   margin: 0 auto;
 
   background: #fff;
@@ -62,20 +82,38 @@
     background-color: #fff;
     box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
     border-radius: $radius;
+
+
   }
 
   &::before {
     z-index: -1;
     bottom: -30px;
-    width: 678px;
+    max-width: 678px;
+    width: 100%;
     height: 363px;
+
+    @include md {
+      height: 163px;
+    }
+
   }
 
   &::after {
     z-index: -2;
     bottom: -50px;
-    width: 618px;
+    max-width: 618px;
+    width: 100%;
     height: 331px;
+
+    @include md {
+      height: 131px;
+    }
+  }
+
+  @include md {
+    padding: 58px 40px 45px;
+    max-height: none;
   }
 }
 
@@ -83,6 +121,9 @@
   position: relative;
   z-index: 5;
   background: #fff;
+
+  width: 100% !important;
+  height: 100% !important;
 
 
   &::before {
@@ -96,6 +137,14 @@
     width: 234px;
     height: 168px;
     background: url('../img/dots-slide.png');
+
+    @include md {
+      max-width: 134px;
+      background-size: cover;
+      height: 88px;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
   }
 
   p {
@@ -107,15 +156,24 @@
     line-height: 1.5;
     text-align: center;
     color: var(--color-gray);
+
+    @include md {
+      font-size: 20px;
+    }
   }
 }
 
 .testimonials__arrows {
   position: absolute;
-  bottom: -78px;
+  bottom: -117px;
   right: 464px;
 
   display: flex;
+
+  @include lg {
+    right: 50%;
+    transform: translateX(50%);
+  }
 
 }
 

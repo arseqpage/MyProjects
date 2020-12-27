@@ -16,6 +16,10 @@
     height: 89px;
     border-radius: 50%;
     border: 5px solid #FFBA49;
+
+    @include lg {
+      display: none;
+    }
   }
 }
 
@@ -40,6 +44,7 @@
 .footer__bonus {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   margin-bottom: 141px;
 
@@ -63,7 +68,29 @@
 
       fill: var(--color-white);
     }
+
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
   }
+
+  @include lg {
+    justify-content: space-around;
+  }
+
+  @include md {
+    margin-bottom: 70px;
+  }
+
+  @include sm {
+    justify-content: space-around;
+  }
+
+
 }
 
 .footer__block-logo {
@@ -85,8 +112,19 @@
   padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   color: var(--color-white);
+
+
+
+}
+
+.footer__list {
+  @include lg {
+    margin: 0 20px;
+  }
+
 }
 
 .footer__list-title {
@@ -142,6 +180,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__social {
@@ -182,6 +221,14 @@
     }
   }
 
+  @include md {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    width: 100%;
+  }
 
 }
 
@@ -192,5 +239,25 @@
   &-link {
     text-decoration: underline;
     color: inherit;
+  }
+
+  @include md {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.footer__sponsor {
+  @include md {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    width: 100%;
   }
 }

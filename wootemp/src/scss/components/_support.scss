@@ -38,6 +38,10 @@
   &-img {
     width: 100%;
     object-fit: none;
+
+    @media (max-width: 1400px) {
+      object-fit: cover;
+    }
   }
 
   &::before {
@@ -68,6 +72,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &-title {
@@ -81,9 +89,25 @@
     color: var(--color-white);
     font-weight: 400;
 
+    @include sm {
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
     span {
       font-weight: 700;
     }
+
+    @include lg {
+      font-size: 24px;
+    }
+
+    @include sm {
+      font-size: 18px;
+    }
+
+
   }
 
   &-btn {
@@ -101,5 +125,31 @@
       color: var(--color-black);
     }
 
+    @include lg {
+      padding: 10px 30px;
+    }
+
+  }
+
+  @include lg {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-top: -144px;
+  }
+
+  @include md {
+    margin-top: -121px;
+  }
+
+  @include sm {
+    margin-top: -92px;
+  }
+
+  @include xs {
+    margin-top: -65px;
+  }
+
+  @include xxs {
+    margin-top: -55px;
   }
 }

@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
 	<title>New site</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
@@ -22,7 +23,65 @@
 		
 		@include('html/footer.html')
 		<!-- @include('html/h1.html') пример инклуда -->
+
+		<div class="modal">
+			<div class="modal__container" data-target="first">
+				<button class="modal-close">
+					<svg class="modal-close__icon">
+						<use xlink:href="img/sprite.svg#close"></use>
+					</svg>
+				</button>
+
+				<div class="modal-content">
+					<form action="mail.php" enctype="multipart/form-data" class="form" method="POST">
+						<input type="hidden" name="admin_email[]" value="arseqpage@gmail.com">
+						<input type="hidden" name="form_subject" value="Тема письма">
+						<h2 class="form-title">Send Form</h2>
+						<label class="form-label">
+							<span>Your Name</span>
+							<input type="text" name="name" placeholder="Johnny Cage">
+						</label>
+						<label class="form-label">
+							<span>Your Phone</span>
+							<input type="tel" data-validate-field="tel" name="tel" placeholder="+7 (999) 999 99-99">
+						</label>
+						<label class="form-label">
+							<span>Your Email</span>
+							<input type="email" data-validate-field="email" name="email" placeholder="bruh@gmail.com">
+						</label>
+						<!-- <label class="form-label file-label">
+							<span>Прикрепить файл</span>
+							<input type="file" name="file[]" multiple>
+						</label> -->
+						<button class="form-btn btn-reset" type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		
+			<div class="modal__container" data-target="thanks">
+				<button class="modal-close">
+					<svg class="modal-close__icon">
+						<use xlink:href="img/sprite.svg#close"></use>
+					</svg>
+				</button>
+
+				<div class="modal-content">
+					<div class="modal__thanks">
+						<p class="modal__thanks-text">Your application has been sent, thank you!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+
+	
+		
 	</div>
+	<script>  
+		var polyfilter_scriptpath = '/css-filters-polyfill/lib/';  
+	</script>
+	
 	<script src="js/main.js"></script>
 </body>
 </html>

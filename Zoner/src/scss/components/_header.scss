@@ -115,10 +115,13 @@
   }
 
   &__close {
+    display: none;
+
     @include md {
+      display: block;
       position: absolute;
       right: 10%;
-      top: 3%;
+      top: 5%;
     }
   }
 }

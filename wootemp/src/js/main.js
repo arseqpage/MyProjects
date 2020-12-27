@@ -1,6 +1,16 @@
 import './vendor/focus-visible.min.js';
+import './functions/smooth-scroll';
 import './_vars';
 import './components/testimonials';
+import './components/modal';
+import './components/inputmask.js';
+import './components/burger';
+import './vendor/inputmask';
+
+
+
+
+
 import {
   resizeContent
 } from './functions/resize';

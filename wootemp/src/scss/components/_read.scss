@@ -73,6 +73,10 @@
         left: 50%;
         transform: translate(-50%);
         filter: blur(50px);
+
+        @include md {
+          display: none;
+        }
       }
     }
 
@@ -93,6 +97,10 @@
         left: 50%;
         transform: translate(-50%);
         filter: blur(50px);
+
+        @include md {
+          display: none;
+        }
       }
     }
   }
@@ -138,6 +146,12 @@
       padding-top: 40px;
       padding-left: 0;
       padding-right: 40px;
+
+      @include md {
+        padding: 0;
+        padding-right: 0;
+        padding-top: 20px;
+      }
     }
   }
 
@@ -165,6 +179,11 @@
   &-text {
     padding-top: 100px;
     padding-left: 70px;
+
+    @include sm {
+      padding-top: 20px;
+      padding-left: 0px;
+    }
   }
 
   &-title {
@@ -175,6 +194,10 @@
     font-size: 36px;
     line-height: 1.27;
     color: var(--color-white);
+
+    @include md {
+      font-size: 26px;
+    }
   }
 
   &-descr {
@@ -184,6 +207,30 @@
     font-size: 18px;
     line-height: 1.67;
     color: var(--color-white);
+
+    @include md {
+      font-size: 16px;
+    }
+  }
+
+  @include md {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:nth-child(1) {
+      .read__item-img {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include sm {
+    flex-direction: column !important;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -206,6 +253,10 @@
     height: 473px;
     transform: rotate(90deg);
   }
+
+  @include lg {
+    display: none;
+  }
 }
 
 .read__btn {
@@ -223,5 +274,9 @@
 
   &:hover {
     background-color: $darken-green;
+  }
+
+  @include md {
+    padding: 14px 18px;
   }
 }

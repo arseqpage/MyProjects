@@ -28,6 +28,7 @@ const revRewrite = require('gulp-rev-rewrite');
 const revdel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
 
+
 // DEV
 //svg sprite
 const svgSprites = () => {
@@ -40,17 +41,17 @@ const svgSprites = () => {
       },
     }))
     .pipe(dest('./app/img'));
-}
+};
 
 const resources = () => {
   return src('./src/resources/**')
-    .pipe(dest('./app'))
+    .pipe(dest('./app'));
 }
 
 const imgToApp = () => {
   return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/*.svg'])
     .pipe(dest('./app/img'))
-}
+};
 
 const htmlInclude = () => {
   return src(['./src/*.html'])
@@ -157,7 +158,7 @@ const styles = () => {
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./app/css/'))
     .pipe(browserSync.stream());
-}
+};
 
 const scripts = () => {
   return src('./src/js/main.js')
@@ -235,7 +236,7 @@ const tinypng = () => {
       log: true,
     }))
     .pipe(dest('./app/img'))
-}
+};
 
 const stylesBuild = () => {
   return src('./src/scss/**/*.scss')
@@ -252,7 +253,7 @@ const stylesBuild = () => {
       level: 2
     }))
     .pipe(dest('./app/css/'))
-}
+};
 
 const scriptsBuild = () => {
   return src('./src/js/main.js')
@@ -303,7 +304,7 @@ const rewrite = () => {
       manifest
     }))
     .pipe(dest('app'));
-}
+};
 
 const htmlMinify = () => {
   return src('app/**/*.html')
@@ -311,7 +312,7 @@ const htmlMinify = () => {
       collapseWhitespace: true
     }))
     .pipe(dest('app'));
-}
+};
 
 exports.cache = series(cache, rewrite);
 
@@ -336,8 +337,8 @@ const deploy = () => {
       base: './app',
       buffer: false
     })
-    .pipe(conn.newer('')) // only upload newer files
-    .pipe(conn.dest(''));
-}
+    .pipe(conn.newer('/www/arseqpage.ru/wot/')) // only upload newer files
+    .pipe(conn.dest('/www/arseqpage.ru/wot/'));
+};
 
 exports.deploy = deploy;
