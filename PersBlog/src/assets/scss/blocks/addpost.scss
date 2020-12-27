@@ -1,0 +1,103 @@
+.add-post {
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+
+  background-color: $secondary;
+  box-shadow: 0 15px 25px rgba($black, .45);
+  border-radius: 5px;
+
+  @include br($mobile-br) {
+    padding: 1.5rem;
+  }
+}
+
+.add-post__form {
+  display: flex;
+  align-items: center;
+}
+
+.add-post__textarea {
+  display: block;
+  flex-grow: 1;
+  height: 30px;
+  overflow: hidden;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1.5rem;
+  color: $white;
+  font-family: inherit;
+  resize: none;
+
+  &::placeholder {
+    color: #d2d2d2;
+  }
+}
+
+.add-post__form-actions {
+  width: 120px;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+
+  @include br($mobile-br) {
+    width: 9rem;
+  }
+}
+
+.add-post__file,
+.add-post__send {
+  display: block;
+  width: 4.4rem;
+  height: 4.4rem;
+
+  border-radius: $radius;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  transition: all .3s ease-in-out;
+
+  svg {
+    width: 17px;
+    height: 16px;
+  }
+
+  @include br($mobile-br) {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+}
+
+.add-post__file {
+  background: #ebebeb url('../images/sprite.svg#photo');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    background-color: darken(#ebebeb, 8%);
+  }
+}
+
+.add-post__send {
+  display: block;
+
+  background-color: $blue;
+
+  &:hover {
+    background-color: darken($blue, 8%);
+  }
+
+  svg {
+    width: 14px;
+    height: 13px;
+  }
+}

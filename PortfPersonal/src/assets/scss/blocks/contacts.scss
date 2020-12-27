@@ -1,0 +1,12 @@
+.contacts {
+  &:hover {
+    &:hover {
+      .second-title {
+        &::after {
+          width: 100%;
+          box-shadow: 0 0px 17px rgba($blue, .9);
+        }
+      }
+    }
+  }
+}
