@@ -1,0 +1,60 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 0;
+
+  text-align: center;
+
+  background: url('../images/hero_background.jpg') center no-repeat;
+  background-size: cover;
+
+  &::before {
+    width: inherit;
+    height: inherit;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--purple-transparent-alt);
+
+  }
+}
+
+.main-heading {
+  margin-bottom: 2.5rem;
+
+  color: #fff;
+  line-height: 1;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, .5);
+}
+
+.title {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  @include mf {
+    font-size: 8rem;
+  }
+
+  @include large-f {
+    font-size: 12rem;
+  }
+}
+
+.subtitle {
+  font-size: 3.6rem;
+  font-weight: 300;
+  font-family: "Courgette", cursive;
+
+  @include large-f {
+    font-size: 5.4rem;
+  }
+}
