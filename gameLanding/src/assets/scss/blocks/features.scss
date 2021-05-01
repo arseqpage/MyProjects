@@ -1,0 +1,135 @@
+.features {
+  min-height: 100vh;
+
+  padding-top: 25.8rem;
+  padding-bottom: 18rem;
+  display: flex;
+  align-items: center;
+
+  background: url('../images/features-b.jpg') center no-repeat, #080A0B;
+  background-size: cover;
+
+  @include sm {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+
+.features__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.features__text {
+  width: 45%;
+
+  @include sm {
+    width: 60%;
+  }
+
+  @include xxs {
+    width: 80%;
+  }
+
+}
+
+.features__tabs {
+  margin-top: 7rem;
+  padding-left: 3rem;
+}
+
+.features__tab {
+  margin-bottom: 3.5rem;
+
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: -2.35rem;
+    width: 1px;
+    height: 0;
+
+
+    background: transparent;
+    border: 1px solid #fff;
+    transform: scale(0);
+    transition: height .3s;
+
+    @include sm {
+      top: 1.9rem;
+      left: -2.4rem;
+
+    }
+  }
+
+  &.active {
+
+    &:not(:last-child) {
+      &::after {
+        height: calc(100% + 3rem);
+        transform: scale(1);
+
+        @include sm {
+          height: calc(100% + 2.5rem);
+        }
+      }
+    }
+  }
+}
+
+.features__tab-name {
+  font-family: 'BebasNeue';
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  color: var(--color-orange);
+  cursor: pointer;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    width: 14px;
+    height: 14px;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+
+  &.active {
+    &::before {
+      background: #fff;
+    }
+  }
+
+  @include sm {
+    font-size: 2.1rem;
+  }
+}
+
+.features__tab-text {
+  max-width: 362px;
+  width: 0;
+  height: 0;
+
+  font-size: 0rem;
+  color: transparent;
+
+  transition: color .2s;
+
+  &.show {
+    height: 100%;
+    width: 100%;
+    font-size: 1.8rem;
+    color: inherit;
+  }
+}

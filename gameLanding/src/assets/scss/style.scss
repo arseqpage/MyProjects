@@ -1,0 +1,145 @@
+@import 'vendor/swiper';
+
+
+@import "mixins/font-face";
+@import "mixins/breakpoints";
+@import "mixins/visually-hidden";
+@import "mixins/burger";
+@import "vars";
+@import "vendor/reset";
+@import "vendor";
+@import "fonts";
+
+
+:root {
+    --color-orange: #FFB548;
+    --color-gray: #979797;
+    --color-black: #1A1917;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080A0B;
+    font-family: 'OpenSans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #fff;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.burger {
+    --burger-width: 25px;
+    --burger-height: 20px;
+    --burger-line-height: 2px;
+
+    @include burger;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+
+    &:focus,
+    &:hover {
+        outline: none
+    }
+}
+
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    max-width: 123rem;
+    width: 100%;
+}
+
+.btn-reset {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button {
+    padding: 1.7rem;
+
+    border-radius: .4rem;
+    background-color: var(--color-orange);
+
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    // color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 8rem;
+    line-height: 1;
+    letter-spacing: .3rem;
+    font-family: 'BebasNeue';
+
+    @include sm {
+        font-size: 5rem;
+    }
+}
+
+.subtitle {
+    font-size: 2.4rem;
+    font-family: 'BebasNeue';
+    color: #fff;
+    line-height: 1;
+    letter-spacing: .2rem;
+
+    @include sm {
+        font-size: 2rem;
+    }
+}
+
+/* Blocks */
+
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/features";
+@import "blocks/system";
+@import "blocks/quotes";
+@import "blocks/news";
+@import "blocks/footer";

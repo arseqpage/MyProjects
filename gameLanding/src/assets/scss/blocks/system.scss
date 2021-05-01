@@ -1,0 +1,115 @@
+.system {
+  min-height: 100vh;
+  padding-top: 14.5rem;
+  padding-bottom: 17rem;
+
+  background: url('../images/system.jpg') center no-repeat;
+  background-size: cover;
+
+  @include sm {
+    padding-top: 6rem;
+    background-position: 25%;
+    padding-bottom: 5rem;
+  }
+}
+
+.system__subtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.system__title {
+  text-align: center;
+}
+
+.system__grid {
+  max-width: 574px;
+  border: 1px solid #979797;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: minmax(14rem, 27.6rem) minmax(14rem, 29.6rem);
+
+  &-last {
+    grid-column: 1/-1;
+
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(95% 100%, 100% 80%, 100% 0%, 0 0, 0 100%, 100% 100%, 0% 96%, 39% 95%, 45% 100%);
+    border-left: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    border-right: 1px solid #979797;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 12px;
+      right: -8px;
+      width: 40px;
+      height: 1px;
+      background: #979797;
+      transform: rotate(-40deg);
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    @include sm {
+      clip-path: none;
+    }
+
+
+  }
+
+  @include sm {
+    margin-top: 7rem;
+  }
+}
+
+.system__grit-item {
+  padding: 1.4rem 2rem;
+
+  &:first-child {
+    border-right: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+  }
+
+  &:nth-child(2),
+  &:nth-child(4) {
+    border-right: 1px solid #979797;
+  }
+
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    border-bottom: 1px solid #979797;
+  }
+
+  &:nth-child(3) {
+    border-right: 1px solid #979797;
+  }
+
+
+}
+
+.system__grid-title {
+  font-size: 2.4rem;
+  font-family: 'BebasNeue', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--color-orange);
+
+  @include sm {
+    font-size: 1.8rem;
+  }
+}
+
+.system__grid-text {
+  font-size: 1.8rem;
+
+  @include sm {
+    font-size: 1.4rem;
+  }
+}

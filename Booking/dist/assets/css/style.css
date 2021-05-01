@@ -586,6 +586,12 @@ section {
     padding: 5rem 0;
 }
 
+@media screen and (min-width: 1000px) {
+    section:not(.booking) {
+        padding: 10rem 0;
+    }
+}
+
 .section-head {
     text-align: center;
     margin-bottom: 5rem;
@@ -654,6 +660,23 @@ section {
     left: 0;
     background-color: var(--purple-transparent);
     z-index: 999;
+    transition: background-color .3s, height .3s;
+}
+
+.header.active {
+    background-color: var(--purple-solid);
+}
+
+@media screen and (min-width: 768px) {
+    .header.active {
+        height: 6rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 10rem;
+    }
 }
 
 .nav {
@@ -675,6 +698,12 @@ section {
     cursor: pointer;
     position: relative;
     z-index: 1500;
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburger-menu {
+        display: none;
+    }
 }
 
 .hamburger-menu .fa-times {
@@ -705,6 +734,22 @@ section {
     transform: scale(0);
 }
 
+@media screen and (min-width: 1000px) {
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: initial;
+        justify-content: initial;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 .menu-open .nav-list {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -723,6 +768,13 @@ section {
     margin-bottom: .5rem;
 }
 
+@media screen and (min-width: 1000px) {
+    .nav-item:not(:last-child):not(:last-child) {
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+}
+
 .nav-link {
     display: block;
     padding: 1rem;
@@ -731,6 +783,18 @@ section {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1000px) {
+    .nav-link {
+        font-size: 1.3rem;
+        font-weight: normal;
+        transition: color .3s;
+    }
+
+    .nav-link:hover {
+        color: var(--yellow-solid);
+    }
 }
 
 .hero {
@@ -773,14 +837,57 @@ section {
     font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .title {
+        font-size: 12rem;
+    }
+}
+
 .subtitle {
     font-size: 3.6rem;
     font-weight: 300;
     font-family: "Courgette", cursive;
 }
 
+@media screen and (min-width: 1000px) {
+    .subtitle {
+        font-size: 5.4rem;
+    }
+}
+
 .booking {
     background-image: var(--gradient-color);
+}
+
+@media screen and (min-width: 1000px) {
+    .booking-form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .booking-form .input-group {
+        margin-bottom: 0;
+    }
+
+    .booking-form .input-group:first-child {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .booking-form .input-group:first-child {
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+    }
 }
 
 .input-group {
@@ -808,6 +915,13 @@ section {
     letter-spacing: 2px;
     font-family: "Open Sans", sans-serif;
   /* resize: none; */
+}
+
+@media screen and (min-width: 1000px) {
+    .input,
+    .options {
+        min-width: 10rem;
+    }
 }
 
 .featured-hotels {
@@ -884,4 +998,279 @@ section {
 .paragraph {
     color: #a5a5a5;
     margin-bottom: 2.5rem;
+}
+
+.rooms {
+    background-color: #f2f6f9;
+}
+
+@media screen and (min-width: 1000px) {
+    .rooms-grid {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-gap: 8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .featured-rooms {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
+.image-wrap {
+    position: relative;
+    height: 25rem;
+}
+
+.image-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-transparent-alt);
+}
+
+.room-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.room-name {
+    padding: .5rem 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+    z-index: 10;
+    font-size: 2.6rem;
+    background-color: var(--yellow-solid);
+    color: #fff;
+}
+
+@media screen and (min-width: 1000px) {
+    .room-info-wrap {
+        margin-left: 1rem;
+    }
+}
+
+.room-price {
+    display: block;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: var(--yellow-solid);
+}
+
+.per-night {
+    color: var(--dark-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.rooms-btn {
+    padding: 0;
+    color: var(--dark-color);
+    transition: color .25s;
+}
+
+.rooms-btn:hover {
+    color: var(--yellow-solid);
+}
+
+.contact-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-content {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.traveler-wrap {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .traveler-wrap {
+        display: block;
+        -ms-flex: 0 0 45%;
+        flex: 0 0 45%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .traveler-wrap img {
+        width: 100%;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    padding: 2.5rem;
+    background-image: var(--gradient-color);
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form .input-group-wrap {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form .input-group-wrap .input-group {
+        width: 50%;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form .input-group-wrap .input-group:last-child {
+        margin-right: 0;
+    }
+}
+
+.contact-form .input {
+    display: block;
+    padding-left: 0;
+    color: #fff;
+    font-weight: normal;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+}
+
+.contact-form .input:focus + .bar::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.contact-form .bar {
+    display: block;
+    position: relative;
+}
+
+.contact-form .bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--purple-light);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+}
+
+.footer {
+    padding: 5rem 0;
+    color: #fff;
+    background-color: var(--purple-solid);
+}
+
+.footer .paragraph {
+    color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .paragraph {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-content {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.footer-content-brand {
+    margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-content-brand {
+        margin-bottom: 0;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+    }
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-heading {
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .social-media-wrap {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        margin-left: 2.5rem;
+    }
+}
+
+.social-media {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.sm-link {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+    border: 2px solid var(--yellow-solid);
+    border-radius: 50%;
+    transition: background-color .3s;
+}
+
+.sm-link i {
+    color: var(--yellow-solid);
+    margin: auto;
+    transition: color .3s;
+}
+
+.sm-link:hover {
+    background-color: var(--yellow-solid);
+    color: var(--dark-color);
+}
+
+.sm-link:hover i {
+    color: inherit;
 }

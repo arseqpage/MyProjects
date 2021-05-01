@@ -1,0 +1,38 @@
+.about__container {
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md-min {
+    column-gap: 7rem;
+  }
+}
+
+.about__data {
+  text-align: center;
+
+  @include xs {
+    text-align: initial;
+  }
+}
+
+.about__initial {
+  @include xs {
+    text-align: initial;
+  }
+}
+
+.about__description {
+  margin-bottom: var(--mb-3);
+}
+
+.about__img {
+  width: 280px;
+  border-radius: .5rem;
+  justify-self: center;
+
+  @include xs {
+    width: 380px;
+    order: -1;
+  }
+}

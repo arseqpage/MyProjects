@@ -1,0 +1,23 @@
+.contact__container {
+  text-align: center;
+
+  @include xs {
+    text-align: initial;
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+  }
+}
+
+.contact__initial {
+  @include xs {
+    text-align: initial;
+  }
+}
+
+.contact__description {
+  margin-bottom: var(--mb-3);
+}
+
+.contact__button {
+  justify-self: center;
+}

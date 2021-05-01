@@ -399,6 +399,13 @@ textarea {
   padding: 0.2em 0; }
 
 @font-face {
+  font-family: "SF";
+  src: url("../fonts/SF-UltraLight.woff2") format("woff2"), url("../fonts/SF-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
   font-family: "Courgette";
   src: url("../fonts/Courgette-Regular.woff2") format("woff2"), url("../fonts/Courgette-Regular.woff") format("woff");
   font-weight: 400;
@@ -409,13 +416,6 @@ textarea {
   font-family: "SF";
   src: url("../fonts/SF-Regular.woff2") format("woff2"), url("../fonts/SF-Regular.woff") format("woff");
   font-weight: 400;
-  font-display: swap;
-  font-style: normal; }
-
-@font-face {
-  font-family: "SF";
-  src: url("../fonts/SF-UltraLight.woff2") format("woff2"), url("../fonts/SF-UltraLight.woff") format("woff");
-  font-weight: 200;
   font-display: swap;
   font-style: normal; }
 

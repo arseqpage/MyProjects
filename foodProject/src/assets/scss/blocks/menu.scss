@@ -1,0 +1,63 @@
+.menu__container {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+
+  @include sm-min {
+    margin-top: var(--mb-6);
+    grid-template-columns: repeat(3, 210px);
+    column-gap: 4rem;
+  }
+}
+
+.menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(3, 74, 40, .15);
+
+  @include sm-min {
+    padding: 1.5rem;
+  }
+}
+
+.menu__img {
+  width: 100px;
+  align-self: center;
+  margin-bottom: var(--mb-2);
+
+  @include sm-min {
+    width: 130px;
+  }
+}
+
+.menu__name,
+.menu__price {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.menu__name {
+  font-size: var(--normal-fsz);
+}
+
+.menu__details,
+.menu__price {
+  font-size: var(--small-fsz);
+}
+
+.menu__details {
+  margin-bottom: var(--mb-1);
+}
+
+.menu__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: .625rem .813rem;
+  border-radius: .5rem 0 .5rem 0;
+}

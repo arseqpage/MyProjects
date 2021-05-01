@@ -1,0 +1,106 @@
+.news {
+  background: #080A0B;
+
+  @include sm {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.news__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include sm {
+    position: relative;
+  }
+}
+
+.news__img {
+  @include xs {
+    position: absolute;
+    left: -60%;
+    top: 0;
+    z-index: 0;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+.news__text {
+  width: 55%;
+
+  @include sm {
+    width: 70%;
+    z-index: 2;
+    margin-left: auto;
+  }
+}
+
+.news__title {
+  margin-bottom: 4.5rem;
+}
+
+.news__description {
+  margin-bottom: 6px;
+
+  font-size: 1.8rem;
+}
+
+.news__form {
+  margin-top: 6rem;
+  display: flex;
+
+  @include md {
+    flex-direction: column;
+
+  }
+
+  @include sm {
+    margin-left: -43%;
+  }
+}
+
+.news__form-label {
+  position: relative;
+  max-width: 36.7rem;
+  width: 100%;
+  margin-right: 1.7rem;
+
+  @include md {
+    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .label-text {
+    position: absolute;
+    top: .6rem;
+    left: 2.1rem;
+    font-size: 1.4rem;
+    opacity: .5;
+
+  }
+
+  .news__input {
+    padding: 2.7rem 2.1rem .6rem;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    outline: none;
+    color: var(--color-orange);
+    border-radius: 5px;
+
+
+
+  }
+}
+
+.news__btn {
+  padding: 1.78rem 7.1rem;
+
+}

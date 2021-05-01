@@ -1,0 +1,253 @@
+.about {
+  min-height: 100vh;
+  background: url("../images/about-bg.jpg") center no-repeat, #080A0B;
+  background-size: cover;
+
+  position: relative;
+
+  padding: 18rem 0 14rem;
+}
+
+.about__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @include lg {
+    flex-direction: column;
+  }
+}
+
+.about__text {
+  padding-top: 5rem;
+  max-width: 50%;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+
+  &-top {
+    max-width: 410px;
+    position: relative;
+
+    @include lg {
+      max-width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 710px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 4px;
+
+      @include lg {
+        width: 100%;
+      }
+    }
+  }
+
+  &-bottom {
+    margin-top: 7rem;
+    margin-left: auto;
+    max-width: 365px;
+
+    @include lg {
+      max-width: 100%;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    p {
+
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+
+      .td-orange {
+        position: relative;
+
+
+        &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          z-index: -1;
+
+          background-color: var(--color-orange);
+        }
+      }
+    }
+  }
+
+  @include lg {
+    max-width: 100%;
+
+    margin-bottom: 2rem;
+  }
+}
+
+.about__title,
+.about__subtitle {
+  @include lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+.about__slider {
+
+  width: 50%;
+  position: relative;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+
+  .swiper-pag {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+
+
+    transform: translateX(-50%);
+
+    .swiper-pagination-bullet {
+      margin: 0 2.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: transparent;
+      border: 1px solid #fff;
+      position: relative;
+
+      &:not(:last-child) {
+        &::before {
+          position: absolute;
+          top: .5rem;
+          right: -5.1rem;
+          width: 0;
+          content: '';
+          background: #fff;
+          height: 1px;
+          transform: translateY(50%);
+
+          transition: width 1s;
+        }
+      }
+
+
+
+      &-active {
+        background: #fff;
+        position: relative;
+
+        &:not(:last-child) {
+          &::before {
+            position: absolute;
+            top: .5rem;
+            right: -5.1rem;
+            width: 6rem;
+            content: '';
+            background: #fff;
+            height: 1px;
+            transform: translateY(50%);
+
+
+          }
+        }
+
+
+      }
+    }
+
+    @include sm {
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      bottom: 1rem;
+
+    }
+  }
+
+  @include lg {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  @include sm {
+    margin: 0;
+
+  }
+}
+
+.about-swiper-slider {
+  max-width: 583px;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+  margin-left: auto;
+
+  @include lg {
+    margin: 0 auto;
+  }
+}
+
+
+.about__item {
+  max-width: 500px;
+  width: 100%;
+  height: 610px;
+  margin-right: auto;
+  border-radius: 5px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include sm {
+    max-width: none;
+
+    height: auto;
+    width: 90%;
+  }
+
+  @include xxs {}
+}
+
+.about-next {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  transform: translateY(-50%) rotate(-90deg);
+
+  cursor: pointer;
+
+  @include lg {
+    right: -.5rem;
+  }
+
+
+}
+
+.about-next__icon {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+
+
+
+
+}
