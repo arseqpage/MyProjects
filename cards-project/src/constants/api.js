@@ -3,3 +3,5 @@ export const API_URL = 'https://gateway.marvel.com/v1/public/';
 
 export const URL_COMICS = 'comics';
 export const URL_CHARACTERS = 'characters';
+export const IMG_STANDART_XLARGE = 'portrait_xlarge';
+export const IMG_NOT_AVAILABLE = 'image_not_available';
