@@ -1,5 +1,0 @@
-@mixin br($br) {
-  @media screen and (max-width: $br) {
-    @content
-  }
-}
